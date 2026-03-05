@@ -100,16 +100,18 @@ Note: watch mode does not produce JPGs. Run the full `build.sh` when you need to
 
 | Lines (approx) | Content |
 |---|---|
-| 1-50 | Preamble, packages, custom commands, page style |
-| 51-159 | **Page 1**: Header, Aktenzeichen, Teil 1 (4 bordered boxes) |
-| 160-217 | **Page 2**: Teil 2 -- Berufliche Daten (tables) |
-| 218-253 | **Page 3**: Teil 3 -- Vermittlungsgespraech (tables + itemize) |
-| 254-287 | **Page 4**: Teil 4 -- Migrationshintergrund (tables + signature) |
+| 1-52 | Preamble, packages, custom commands, page style |
+| 53-162 | **Page 1**: Header, Aktenzeichen, Teil 1 (4 bordered boxes) |
+| 163-253 | **Page 2**: Teil 2 -- Berufliche Daten (bordered heading box, checkboxes, tables) |
+| 254-310 | **Page 3**: Sprachkenntnisse (bordered box) + Teil 3 -- Vorbereitung Vermittlungsgespr\"ach (bordered box with tables + famili\"ares Umfeld) |
+| 311-363 | **Page 4**: Teil 4 -- Migrationshintergrund (tables + Zus\"atzliche Fragen box) |
 
 ### Current status
 
-- **Page 1**: Substantially rewritten to match original. May need minor spacing tweaks.
-- **Pages 2-4**: Initial draft layout; not yet compared or adjusted against originals.
+- **Page 1**: Complete -- matches original.
+- **Page 2**: Complete -- matches original.
+- **Page 3**: Complete -- matches original.
+- **Page 4**: Rewritten to match original. Note: `main.tex` includes a signature line (Ort, Datum / Unterschrift) at the bottom that does NOT appear on the original scan -- may need removal.
 
 ### Common pitfalls
 
