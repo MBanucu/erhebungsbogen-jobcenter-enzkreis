@@ -69,8 +69,8 @@
 
 % === AKTENZEICHEN BOX ===
 \noindent\fbox{%
-\begin{minipage}[t]{0.56\textwidth}
-  \vspace{2pt}
+\begin{minipage}[t]{\dimexpr\textwidth-2\fboxsep-2\fboxrule\relax}
+  \vspace{20pt}
   Aktenzeichen: \hspace{0.2cm} \formline{4.5cm} \\[1pt]
   {\small (falls bekannt / wird ansonsten von Ihrem Jobcenter ausgef\"ullt)}
   \vspace{2pt}
@@ -88,9 +88,9 @@
   \vspace{3pt}
   \textbf{Pers\"onliche Informationen}\\[6pt]
   \begin{tabularx}{\linewidth}{@{}p{3.8cm}X@{}}
-    Vorname & \formline{5cm} \\[8pt]
-    Nachname & \formline{5cm} \\[8pt]
-    Geburtsdatum & \formline{5cm} \\[8pt]
+    Vorname & \formline{5cm} \\[11pt]
+    Nachname & \formline{5cm} \\[11pt]
+    Geburtsdatum & \formline{5cm} \\[11pt]
     Staatsangeh\"origkeit & \formline{5cm} \\[4pt]
   \end{tabularx}
   \vspace{2pt}
@@ -105,8 +105,8 @@
   \vspace{3pt}
   \textbf{Kontaktinformationen}\\[6pt]
   \begin{tabularx}{\linewidth}{@{}p{4.2cm}X@{}}
-    Stra{\ss}e und Hausnummer: & \formline{7.5cm} \\[8pt]
-    Postleitzahl, Ort: & \formline{7.5cm} \\[6pt]
+    Stra{\ss}e und Hausnummer: & \formlinefill \\[10pt]
+    Postleitzahl, Ort: & \formlinefill \\[6pt]
   \end{tabularx}
   \begin{tabularx}{\linewidth}{@{}p{1.4cm}p{4.2cm}p{3.0cm}X@{}}
     Telefon: & \formline{3.2cm} & & \\[-3pt]
@@ -129,14 +129,14 @@
   \textbf{Kundendaten}\\[4pt]
   \begin{tabularx}{\linewidth}{@{}p{4.5cm}X@{}}
     Ich bin/werde arbeitslos\newline seit/ab: &
-      \formline{6cm}\\[-3pt]
-    & \hspace{1.5cm}{\scriptsize Monat/Jahr} \\[6pt]
+      \formline{6cm}\newline
+      \hspace{1.5cm}{\scriptsize Monat/Jahr} \\[30pt]
     Letzte T\"atigkeit/Ausbildung/\newline Sonstiges von: &
-      \formline{6cm}\\[-3pt]
-    & \hspace{1.5cm}{\scriptsize Monat/Jahr} \\[6pt]
+      \formline{6cm}\newline
+      \hspace{1.5cm}{\scriptsize Monat/Jahr} \\[30pt]
     als &
-      \formline{6cm}\\[-3pt]
-    & \hspace{0.5cm}{\scriptsize T\"atigkeit, Name und Ort des Arbeitgeber/Schule/etc.} \\[4pt]
+      \formline{6cm}\newline
+      \hspace{0.5cm}{\scriptsize T\"atigkeit, Name und Ort des Arbeitgeber/Schule/etc.}
   \end{tabularx}
   \vspace{2pt}
   Beziehen Sie Arbeitslosengeld oder haben es beantragt? \quad \cb\ nein \quad \cb\ ja seit \formline{2.5cm}
@@ -151,9 +151,9 @@
 \begin{minipage}[t]{\dimexpr\textwidth-2\fboxsep-2\fboxrule\relax}
   \vspace{4pt}
   \begin{tabularx}{\linewidth}{@{}Xp{3.4cm}p{2.8cm}@{}}
-    Ich habe gesundheitliche Einschr\"ankungen & \cb\ ja & \cb\ nein \\[6pt]
-    Grad der Behinderung & \cb\ schwerbehindert & \cb\ gleichgestellt \\[6pt]
-    Ich habe einen Antrag auf berufliche Rehabilitation gestellt. & \cb\ ja & \cb\ nein \\[6pt]
+    Ich habe gesundheitliche Einschr\"ankungen & \cb\ ja & \cb\ nein \\[8pt]
+    Grad der Behinderung & \cb\ schwerbehindert & \cb\ gleichgestellt \\[8pt]
+    Ich habe einen Antrag auf berufliche Rehabilitation gestellt. & \cb\ ja & \cb\ nein \\[8pt]
     Liegt ein Bescheid vor? & \cb\ ja & \cb\ nein \\[3pt]
   \end{tabularx}
   \vspace{1pt}
@@ -162,32 +162,27 @@
 
 \newpage
 
-% === TEIL 2 HEADING (inside bordered box with parenthetical text) ===
+% === TEIL 2 HEADING + SCHULABSCHLUSS (single bordered box) ===
 \noindent\fbox{%
 \begin{minipage}[t]{\dimexpr\textwidth-2\fboxsep-2\fboxrule\relax}
   \vspace{2pt}
   \textbf{Teil 2 \textendash{} Berufliche Daten (bei Vorlage eines aktuellen und vollst\"andigen
   Lebenslaufes brauchen Sie die Angaben zur beruflichen Aus- und Weiterbildung
   und zum beruflichen Werdegang nicht ausf\"ullen)}
-  \vspace{2pt}
+
+  \vspace{6pt}
+
+  \textbf{Angaben zu Ihrem Schulabschluss}\\[6pt]
+  \begin{tabularx}{\linewidth}{@{\hspace{2pt}}p{5.5cm}X@{}}
+    \cb\ kein Schulabschluss & \cb\ Fachhochschulreife \\[8pt]
+    \cb\ Abschluss F\"orderschule & \cb\ Fachabitur \\[8pt]
+    \cb\ Hauptschulabschluss & \cb\ Abitur \\[8pt]
+    \cb\ Mittlere Reife & \\[6pt]
+  \end{tabularx}
+  \textbf{Schulentlassungsjahr} \quad \formline{3cm}
+  \vspace{3pt}
 \end{minipage}%
 }
-
-\vspace{6pt}
-
-% === SCHULABSCHLUSS (bold heading, two-column checkboxes, no box) ===
-\textbf{Angaben zu Ihrem Schulabschluss}
-
-\vspace{4pt}
-
-\begin{tabularx}{\textwidth}{@{\hspace{6pt}}p{5.5cm}X@{}}
-    \cb\ kein Schulabschluss & \cb\ Fachhochschulreife \\[6pt]
-    \cb\ Abschluss F\"orderschule & \cb\ Fachabitur \\[6pt]
-    \cb\ Hauptschulabschluss & \cb\ Abitur \\[6pt]
-    \cb\ Mittlere Reife & \\[4pt]
-\end{tabularx}
-
-\textbf{Schulentlassungsjahr} \quad \formline{3cm}
 
 \vspace{8pt}
 
@@ -233,22 +228,23 @@
 
 \vspace{8pt}
 
-% === MOBILIT\"AT (bold heading above bordered table) ===
-\textbf{Angaben zu Ihrer Mobilit\"at}
-
-\vspace{2pt}
-
-\begin{tabularx}{\textwidth}{|p{5cm}|c|X|}
-    \hline
+% === MOBILIT\"AT (bordered box with heading inside) ===
+\noindent\fbox{%
+\begin{minipage}[t]{\dimexpr\textwidth-2\fboxsep-2\fboxrule\relax}
+  \vspace{3pt}
+  \textbf{Angaben zu Ihrer Mobilit\"at}\\[4pt]
+  \begin{tabularx}{\linewidth}{@{}p{5cm}cX@{}}
     F\"uhrerschein und Fahrzeug & F\"uhrerschein & Fahrzeug vorhanden \tabularnewline
-    \hline
+    \noalign{\vskip 2pt\hrule\vskip 2pt}
     Kraftrad\tablestrut & \cb & \cb \tabularnewline
-    \hline
+    \noalign{\vskip 2pt\hrule\vskip 2pt}
     PKW\tablestrut & \cb & \cb \tabularnewline
-    \hline
+    \noalign{\vskip 2pt\hrule\vskip 2pt}
     LKW\tablestrut & \cb & \tabularnewline
-    \hline
-\end{tabularx}
+  \end{tabularx}
+  \vspace{2pt}
+\end{minipage}%
+}
 
 \newpage
 
@@ -277,7 +273,7 @@
 \noindent\fbox{%
 \begin{minipage}[t]{\dimexpr\textwidth-2\fboxsep-2\fboxrule\relax}
   \vspace{4pt}
-  \textbf{Ich suche eine Stelle als} \formline{9.5cm}\\[4pt]
+  \textbf{Ich suche eine Stelle als} \formlinefill\\[4pt]
   \noindent\rule{\linewidth}{0.4pt}\\[4pt]
   \textbf{Ich habe mich bisher beworben}\hfill \textbf{Ergebnis}\\[4pt]
   \begin{tabularx}{\linewidth}{|X|p{3.5cm}|c|c|}
