@@ -316,7 +316,8 @@
 
 \newcolumntype{C}[1]{>{\centering\arraybackslash}p{#1}}%
 \renewcommand{\arraystretch}{1.0}%
-\noindent\begin{tabularx}{\textwidth}{|p{0.5cm}|p{0.5cm}|X|C{1.1cm}|C{1.1cm}|C{1.3cm}|}
+\setlength{\tabcolsep}{3.5pt}%
+\noindent\begin{tabularx}{\textwidth}{|p{0.5cm}|p{0.5cm}|X|C{0.9cm}|C{0.9cm}|C{1.22cm}|}
     \hline
     \rowcolor{formgray} & & & Ja & Nein & Keine\newline Angabe \tabularnewline
     \hline
@@ -343,7 +344,7 @@
 
 \vspace{-\arrayrulewidth}
 
-\noindent\begin{tabularx}{\textwidth}{|p{0.5cm}|p{0.5cm}|X|C{1.1cm}|C{1.1cm}|C{1.3cm}|}
+\noindent\begin{tabularx}{\textwidth}{|p{0.5cm}|p{0.5cm}|X|C{0.9cm}|C{0.9cm}|C{1.22cm}|}
     \hline
     \rowcolor{formgray} & & & Ja & Nein & Keine\newline Angabe \tabularnewline
     \hline
@@ -354,6 +355,7 @@
     \rule{0pt}{16pt} & c) & Ich habe die deutsche Staatsangeh\"origkeit als Kind oder Enkelkind eines (Sp\"at-)Aussiedlers erworben. & \cb & \cb & \cb \tabularnewline[6pt]
     \hline
 \end{tabularx}
+\setlength{\tabcolsep}{6pt}%
 \renewcommand{\arraystretch}{1.05}%
 
 \end{document}
