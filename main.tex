@@ -2,33 +2,38 @@
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage[ngerman]{babel}
-\usepackage{geometry}
-\geometry{margin=2cm,top=1.8cm,bottom=2cm}
+\usepackage[margin=2cm,top=1.8cm,bottom=2cm]{geometry}
 \usepackage{fancyhdr}
 \usepackage{lastpage}
 \usepackage{tabularx}
 \usepackage{array}
 \usepackage{enumitem}
-\usepackage{graphicx} % falls du später Logo einfügen willst
-\usepackage{amssymb}
-\usepackage{calc}
-\usepackage{xcolor}
-\definecolor{graybg}{gray}{0.92}
+\usepackage{graphicx}
+\usepackage{wasysym}          % nicer checkboxes (\Box)
+\usepackage{lmodern}
+\renewcommand{\familydefault}{\sfdefault}
+\usepackage{amssymb}  % for \checkmark
 
 \pagestyle{fancy}
 \fancyhf{}
-\rhead{\thepage\ von \pageref{LastPage}}
+\rhead{\thepage}                  % changed to "Seite X" style
 \lhead{Erhebungsbogen \quad Enzkreis}
+\cfoot{Seite \thepage}
 \renewcommand{\headrulewidth}{0.4pt}
 
 \begin{document}
 
-\begin{center}
-    \Large\textbf{Erhebungsbogen} \\[4pt]
-    % \includegraphics[width=3cm]{logo-placeholder} % Ersetze durch echtes Logo, falls vorhanden \\[2pt]
-    \Huge \textbf{Enzkreis} \\[6pt]
-    \normalsize \textit{(Logo / Signet Enzkreis)}
-\end{center}
+% ==================== HEADER (matches photo exactly) ====================
+\noindent
+\begin{minipage}[t]{0.68\textwidth}
+  \Large\textbf{Erhebungsbogen}\\[2pt]
+  \Huge\textbf{Enzkreis}
+\end{minipage}%
+\begin{minipage}[t]{0.3\textwidth}
+  \raggedleft
+  % \includegraphics[width=3.8cm]{enzkreis-logo.png} % ← put your logo here if you have it
+  \vspace{-8pt}{\large\textsc{Enzkreis}}
+\end{minipage}
 
 \vspace{8pt}
 
@@ -62,7 +67,7 @@
     \textbf{Fax:} & \underline{\hspace{6cm}} \quad {\small Angeben freiwillig} \\ \hline
     \textbf{E-Mail:} & \underline{\hspace{10cm}} \quad {\small Angeben freiwillig} \\ \hline
     \textbf{Handy:} & \underline{\hspace{6cm}} \quad {\small Angeben freiwillig} \\ \hline
-    \textbf{Internetzugang:} & $\boxtimes$ ja \quad $\square$ nein \\ \hline
+    \textbf{Internetzugang:} & $\CheckedBox$ ja \quad $\Box$ nein \\ \hline
 \end{tabularx}
 
 \subsection*{Kundendaten}
@@ -71,14 +76,14 @@
     \item Letzte Tätigkeit/Ausbildung/Sonstiges von: \underline{\hspace{3cm}} (Monat/Jahr)
     \item als \underline{\hspace{8cm}} \\
       \small{Tätigkeit, Name und Ort des Arbeitgebers/Schule/etc.}
-    \item Beziehen Sie Arbeitslosengeld oder haben es beantragt? $\boxtimes$ nein \quad $\square$ ja seit \underline{\hspace{3cm}}
+    \item Beziehen Sie Arbeitslosengeld oder haben es beantragt? $\CheckedBox$ nein \quad $\Box$ ja seit \underline{\hspace{3cm}}
 \end{itemize}
 
 \vspace{0.5cm}
-Ich habe gesundheitliche Einschränkungen \quad $\square$ ja \quad $\boxtimes$ nein \\[4pt]
-Grad der Behinderung \quad $\square$ schwerbehindert \quad $\square$ gleichgestellt \\[4pt]
-Ich habe einen Antrag auf berufliche Rehabilitation gestellt. \quad $\square$ ja \quad $\square$ nein \\[4pt]
-Liegt ein Bescheid vor? \quad $\square$ ja \quad $\square$ nein
+Ich habe gesundheitliche Einschränkungen \quad $\Box$ ja \quad $\CheckedBox$ nein \\[4pt]
+Grad der Behinderung \quad $\Box$ schwerbehindert \quad $\Box$ gleichgestellt \\[4pt]
+Ich habe einen Antrag auf berufliche Rehabilitation gestellt. \quad $\Box$ ja \quad $\Box$ nein \\[4pt]
+Liegt ein Bescheid vor? \quad $\Box$ ja \quad $\Box$ nein
 
 \newpage
 
@@ -86,12 +91,21 @@ Liegt ein Bescheid vor? \quad $\square$ ja \quad $\square$ nein
 {\small (bei Vorlage eines aktuellen und vollständigen Lebenslaufes brauchen Sie die Angaben zur beruflichen Aus- und Weiterbildung und zum beruflichen Werdegang nicht ausfüllen)}
 
 \subsection*{Angaben zu Ihrem Schulabschluss}
-\begin{itemize}[label=$\square$]
-    \item kein Schulabschluss \item Fachhochschulreife
-    \item Abschluss Förderschule \item Fachabitur
-    \item Hauptschulabschluss \item Abitur
+\begin{minipage}[t]{0.48\textwidth}
+\begin{itemize}[label=$\Box$]
+    \item kein Schulabschluss
+    \item Abschluss Förderschule
+    \item Hauptschulabschluss
     \item Mittlere Reife
 \end{itemize}
+\end{minipage}%
+\begin{minipage}[t]{0.48\textwidth}
+\begin{itemize}[label=$\Box$]
+    \item Fachhochschulreife
+    \item Fachabitur
+    \item Abitur
+\end{itemize}
+\end{minipage}
 
 Schulentlassungsjahr \underline{\hspace{4cm}}
 
@@ -101,10 +115,11 @@ Schulentlassungsjahr \underline{\hspace{4cm}}
     \hline
     \textbf{Zeitraum} & & \textbf{Ausbildungsstätte} & \textbf{Ausbildung als} & \textbf{Abschluss} \\ 
     \cline{1-2}
-    von & bis & (Institution bzw. Unternehmen, Ort) & Bezeichnung & ja \quad nein \\ \hline
-    & & & & $\square$ $\square$ \\ \hline
-    & & & & $\square$ $\square$ \\ \hline
-    & & & & $\square$ $\square$ \\ \hline
+    \textbf{von} & \textbf{bis} & (Institution bzw. Unternehmen, Ort) & Bezeichnung & ja \quad nein \\ \hline
+    Tag/Monat/Jahr & Tag/Monat/Jahr & & & \\ \hline
+    & & & & $\Box$ $\Box$ \\ \hline
+    & & & & $\Box$ $\Box$ \\ \hline
+    & & & & $\Box$ $\Box$ \\ \hline
 \end{tabularx}
 
 \subsection*{Angaben zu Ihrem beruflichen Werdegang}
@@ -113,7 +128,8 @@ Schulentlassungsjahr \underline{\hspace{4cm}}
     \hline
     \textbf{Zeitraum} & & \textbf{Beschäftigungsstelle} & \textbf{Tätigkeit als} \\ 
     \cline{1-2}
-    von & bis & (Name, Ort) & Bezeichnung \\ \hline
+    \textbf{von} & \textbf{bis} & (Name, Ort) & Bezeichnung \\ \hline
+    Tag/Monat/Jahr & Tag/Monat/Jahr & & \\ \hline
     & & & \\ \hline
     & & & \\ \hline
     & & & \\ \hline
@@ -124,9 +140,9 @@ Schulentlassungsjahr \underline{\hspace{4cm}}
 \begin{tabular}{|l|c|c|}
     \hline
     \textbf{Führerschein und Fahrzeug} & \textbf{Führerschein} & \textbf{Fahrzeug vorhanden} \\ \hline
-    \textbf{Kraftrad} & $\boxtimes$ & $\square$ \\ \hline
-    \textbf{PKW} & $\boxtimes$ & $\boxtimes$ \\ \hline
-    \textbf{LKW} & $\square$ &  \\ \hline
+    \textbf{Kraftrad} & $\CheckedBox$ & $\Box$ \\ \hline
+    \textbf{PKW} & $\CheckedBox$ & $\CheckedBox$ \\ \hline
+    \textbf{LKW} & $\Box$ &  \\ \hline
 \end{tabular}
 
 \newpage
@@ -138,8 +154,8 @@ Schulentlassungsjahr \underline{\hspace{4cm}}
 \begin{tabularx}{\textwidth}{|X|c|c|}
     \hline
     \textbf{Muttersprache} & \underline{\hspace{6cm}} & Grundkenntnisse / gut \\ \hline
-    Deutsch & $\square$ Grundkenntnisse & $\boxtimes$ gut \\ \hline
-    Englisch & $\square$ Grundkenntnisse & $\boxtimes$ gut \\ \hline
+    Deutsch & $\Box$ Grundkenntnisse & $\CheckedBox$ gut \\ \hline
+    Englisch & $\Box$ Grundkenntnisse & $\CheckedBox$ gut \\ \hline
 \end{tabularx}
 
 Ich suche eine Stelle als \underline{\hspace{8cm}}
@@ -161,7 +177,7 @@ Bitte legen Sie meine Bewerbung nicht vor bei (Firma): \underline{\hspace{8cm}}
 In meinem familiären Umfeld sind folgende Gegebenheiten zu berücksichtigen:
 
 \begin{itemize}[label=$\square$]
-    \item Kinder unter 15 Jahren im Haushalt \quad Anzahl \underline{\hspace{2cm}} \quad Betreuung sichergestellt $\square$ ja $\square$ nein
+    \item Kinder unter 15 Jahren im Haushalt \quad Anzahl \underline{\hspace{2cm}} \quad Betreuung sichergestellt $\Box$ ja $\Box$ nein
     \item Pflege eines Angehörigen
     \item Sonstige Verpflichtungen
 \end{itemize}
@@ -171,23 +187,26 @@ In meinem familiären Umfeld sind folgende Gegebenheiten zu berücksichtigen:
 \section*{Teil 4 – Angaben zu Ihrem Migrationshintergrund}
 
 \begin{tabular}{|l|c|c|c|}
-    \hline
-    & Ja & Nein & Keine Angabe \\ \hline
-    1. Ich besitze die deutsche Staatsangehörigkeit. & $\boxtimes$ & $\square$ & $\square$ \\ \hline
-    2 a) Ich bin in Deutschland geboren. & $\boxtimes$ & $\square$ & $\square$ \\ \hline
-    2 b) Ich bin nach 1949 nach Deutschland zugewandert. & $\square$ & $\square$ & $\square$ \\ \hline
-    3 a) Mein Vater ist außerhalb Deutschlands geboren und nach 1949 zugewandert. & $\boxtimes$ & $\square$ & $\square$ \\ \hline
-    3 b) Meine Mutter ist außerhalb Deutschlands geboren und nach 1949 zugewandert. & $\boxtimes$ & $\square$ & $\square$ \\ \hline
+\hline
+ & Ja & Nein & Keine Angabe \\ \hline
+1. Ich besitze die deutsche Staatsangehörigkeit. & \checkmark & $\Box$ & $\Box$ \\ \hline
+2 a) Ich bin in Deutschland geboren. & \checkmark & $\Box$ & $\Box$ \\ \hline
+   \small{(heutiges Gebiet der Bundesrepublik Deutschland)} & & & \\ \hline
+2 b) Ich bin nach 1949 nach Deutschland zugewandert. & $\Box$ & $\Box$ & $\Box$ \\ \hline
+   \small{(heutiges Gebiet der Bundesrepublik Deutschland)} & & & \\ \hline
+3 a) Mein Vater ist außerhalb Deutschlands (heutiges Gebiet der Bundesrepublik Deutschland) geboren und nach 1949 zugewandert. & \checkmark & $\Box$ & $\Box$ \\ \hline
+3 b) Meine Mutter ist außerhalb Deutschlands (heutiges Gebiet der Bundesrepublik Deutschland) geboren und nach 1949 zugewandert. & \checkmark & $\Box$ & $\Box$ \\ \hline
 \end{tabular}
 
-Zusätzliche Fragen für deutsche Staatsangehörige, die nach 1949 zugewandert sind (Frage 1 „Ja“ und Frage 2b „Ja“):
+\vspace{1cm}
+\textbf{Zusätzliche Fragen für deutsche Staatsangehörige, die nach 1949 zugewandert sind (Frage 1 „Ja“ und Frage 2b „Ja“):}
 
 \begin{tabular}{|l|c|c|c|}
-    \hline
-    & Ja & Nein & Keine Angabe \\ \hline
-    4 a) ... als Aussiedler oder Spätaussiedler erworben. & $\square$ & $\square$ & $\square$ \\ \hline
-    4 b) ... als Ehegatte ... erworben. & $\square$ & $\square$ & $\square$ \\ \hline
-    4 c) ... als Kind oder Enkelkind ... erworben. & $\square$ & $\square$ & $\square$ \\ \hline
+\hline
+ & Ja & Nein & Keine Angabe \\ \hline
+4 a) Ich habe die deutsche Staatsangehörigkeit als Aussiedler oder Spätaussiedler erworben. & $\Box$ & $\Box$ & $\Box$ \\ \hline
+4 b) Ich habe die deutsche Staatsangehörigkeit als Ehegatte / Ehegattin eines (Spät-)Aussiedlers erworben. & $\Box$ & $\Box$ & $\Box$ \\ \hline
+4 c) Ich habe die deutsche Staatsangehörigkeit als Kind oder Enkelkind eines (Spät-)Aussiedlers erworben. & $\Box$ & $\Box$ & $\Box$ \\ \hline
 \end{tabular}
 
 \vspace{2cm}
