@@ -36,8 +36,10 @@
 % Subsection inside a bordered box
 \newcommand{\formsubsection}[1]{\par\vspace{2pt}\textbf{#1}\par\vspace{2pt}}
 
-% Form field underline
+% Form field underline (fixed width)
 \newcommand{\formline}[1]{\underline{\hspace{#1}}}
+% Form field underline (fills remaining space in column)
+\newcommand{\formlinefill}{\leavevmode\xleaders\hbox{\rule[-.5pt]{1pt}{0.4pt}}\hfill\kern0pt}
 
 \pagestyle{fancy}
 \fancyhf{}
@@ -63,33 +65,33 @@
   {\LARGE\textbf{Enzkreis}}
 \end{minipage}
 
-\vspace{14pt}
+\vspace{16pt}
 
 % === AKTENZEICHEN BOX ===
 \noindent\fbox{%
 \begin{minipage}[t]{0.56\textwidth}
-  \vspace{3pt}
-  Aktenzeichen: \hspace{0.2cm} \formline{4.5cm} \\[2pt]
+  \vspace{2pt}
+  Aktenzeichen: \hspace{0.2cm} \formline{4.5cm} \\[1pt]
   {\small (falls bekannt / wird ansonsten von Ihrem Jobcenter ausgef\"ullt)}
   \vspace{2pt}
 \end{minipage}%
 }
 
-\vspace{8pt}
+\vspace{6pt}
 
-% === TEIL 1 HEADING (no box, just bold text) ===
-\formsection{Teil 1 -- Pers\"onliche Daten}
+% === TEIL 1 HEADING (no box, just bold text with en-dash) ===
+\formsection{Teil 1 \textendash{} Pers\"onliche Daten}
 
 % === PERSOENLICHE INFORMATIONEN (bordered box containing header + fields) ===
 \noindent\fbox{%
 \begin{minipage}[t]{\dimexpr\textwidth-2\fboxsep-2\fboxrule\relax}
   \vspace{3pt}
   \textbf{Pers\"onliche Informationen}\\[6pt]
-  \begin{tabularx}{\linewidth}{@{}p{4.5cm}X@{}}
-    Vorname & \formline{5.5cm} \\[6pt]
-    Nachname & \formline{5.5cm} \\[6pt]
-    Geburtsdatum & \formline{5.5cm} \\[6pt]
-    Staatsangeh\"origkeit & \formline{5.5cm} \\[3pt]
+  \begin{tabularx}{\linewidth}{@{}p{3.8cm}p{7cm}@{}}
+    Vorname & \formline{5cm} \\[8pt]
+    Nachname & \formline{5cm} \\[8pt]
+    Geburtsdatum & \formline{5cm} \\[8pt]
+    Staatsangeh\"origkeit & \formline{5cm} \\[4pt]
   \end{tabularx}
   \vspace{2pt}
 \end{minipage}%
@@ -102,16 +104,16 @@
 \begin{minipage}[t]{\dimexpr\textwidth-2\fboxsep-2\fboxrule\relax}
   \vspace{3pt}
   \textbf{Kontaktinformationen}\\[6pt]
-  \begin{tabularx}{\linewidth}{@{}p{4.2cm}X@{}}
-    Stra{\ss}e und Hausnummer: & \formline{8.5cm} \\[6pt]
-    Postleitzahl, Ort: & \formline{8.5cm} \\[6pt]
+  \begin{tabularx}{\linewidth}{@{}p{4.2cm}p{9cm}@{}}
+    Stra{\ss}e und Hausnummer: & \formline{7.5cm} \\[8pt]
+    Postleitzahl, Ort: & \formline{7.5cm} \\[6pt]
   \end{tabularx}
-  \begin{tabularx}{\linewidth}{@{}p{1.6cm}p{4.8cm}p{3.2cm}X@{}}
-    Telefon: & \formline{3.5cm} & & \\[-2pt]
-     & {\scriptsize Angaben freiwillig} & & \\[3pt]
-    Fax: & \formline{3.5cm} & E-Mail: & \formline{3.8cm} \\[-2pt]
-     & {\scriptsize Angaben freiwillig} & & {\scriptsize Angaben freiwillig} \\[3pt]
-    Handy: & \formline{3.5cm} & Internetzugang: & \cb\ ja \quad \cb\ nein \\[-2pt]
+  \begin{tabularx}{\linewidth}{@{}p{1.4cm}p{4.2cm}p{3.0cm}X@{}}
+    Telefon: & \formline{3.2cm} & & \\[-3pt]
+     & {\scriptsize Angaben freiwillig} & & \\[4pt]
+    Fax: & \formline{3.2cm} & E-Mail: & \formline{3.6cm} \\[-3pt]
+     & {\scriptsize Angaben freiwillig} & & {\scriptsize Angaben freiwillig} \\[4pt]
+    Handy: & \formline{3.2cm} & Internetzugang: & \cb\ ja \quad \cb\ nein \\[-3pt]
      & {\scriptsize Angaben freiwillig} & & \\[2pt]
   \end{tabularx}
   \vspace{1pt}
@@ -124,18 +126,19 @@
 \noindent\fbox{%
 \begin{minipage}[t]{\dimexpr\textwidth-2\fboxsep-2\fboxrule\relax}
   \vspace{3pt}
-  \textbf{Kundendaten}\\[5pt]
-  \begin{tabularx}{\linewidth}{@{}p{5cm}X@{}}
-    Ich bin/werde arbeitslos seit/ab: &
-      \formline{6cm}\\[-2pt]
-    & \hspace{1.5cm}{\scriptsize Monat/Jahr} \\[5pt]
-    \raggedright Letzte T\"atigkeit/Ausbildung/\newline Sonstiges von: &
-      \formline{6cm}\\[-2pt]
-    & \hspace{1.5cm}{\scriptsize Monat/Jahr} \\[5pt]
+  \textbf{Kundendaten}\\[4pt]
+  \begin{tabularx}{\linewidth}{@{}p{4.5cm}X@{}}
+    Ich bin/werde arbeitslos\newline seit/ab: &
+      \formline{6cm}\\[-3pt]
+    & \hspace{1.5cm}{\scriptsize Monat/Jahr} \\[6pt]
+    Letzte T\"atigkeit/Ausbildung/\newline Sonstiges von: &
+      \formline{6cm}\\[-3pt]
+    & \hspace{1.5cm}{\scriptsize Monat/Jahr} \\[6pt]
     als &
-      \formline{6cm}\\[-2pt]
-    & \hspace{0.5cm}{\scriptsize T\"atigkeit, Name und Ort des Arbeitgeber/Schule/etc.} \\[6pt]
+      \formline{6cm}\\[-3pt]
+    & \hspace{0.5cm}{\scriptsize T\"atigkeit, Name und Ort des Arbeitgeber/Schule/etc.} \\[4pt]
   \end{tabularx}
+  \vspace{2pt}
   Beziehen Sie Arbeitslosengeld oder haben es beantragt? \quad \cb\ nein \quad \cb\ ja seit \formline{2.5cm}
   \vspace{3pt}
 \end{minipage}%
@@ -146,12 +149,12 @@
 % === HEALTH / DISABILITY SECTION (bordered box) ===
 \noindent\fbox{%
 \begin{minipage}[t]{\dimexpr\textwidth-2\fboxsep-2\fboxrule\relax}
-  \vspace{3pt}
-  \begin{tabularx}{\linewidth}{@{}Xp{3.2cm}p{2.6cm}@{}}
-    Ich habe gesundheitliche Einschr\"ankungen & \cb\ ja & \cb\ nein \\[5pt]
-    Grad der Behinderung & \cb\ schwerbehindert & \cb\ gleichgestellt \\[5pt]
-    Ich habe einen Antrag auf berufliche Rehabilitation gestellt. & \cb\ ja & \cb\ nein \\[5pt]
-    Liegt ein Bescheid vor? & \cb\ ja & \cb\ nein \\[2pt]
+  \vspace{4pt}
+  \begin{tabularx}{\linewidth}{@{}Xp{3.4cm}p{2.8cm}@{}}
+    Ich habe gesundheitliche Einschr\"ankungen & \cb\ ja & \cb\ nein \\[6pt]
+    Grad der Behinderung & \cb\ schwerbehindert & \cb\ gleichgestellt \\[6pt]
+    Ich habe einen Antrag auf berufliche Rehabilitation gestellt. & \cb\ ja & \cb\ nein \\[6pt]
+    Liegt ein Bescheid vor? & \cb\ ja & \cb\ nein \\[3pt]
   \end{tabularx}
   \vspace{1pt}
 \end{minipage}%
