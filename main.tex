@@ -1,7 +1,14 @@
 \documentclass[10pt,a4paper]{article}
-\usepackage[utf8]{inputenc}
-\usepackage[T1]{fontenc}
+
+% ── Modern font setup ────────────────────────────────────────
+\usepackage{fontspec}
 \usepackage[ngerman]{babel}
+\setmainfont{LiberationSans}[
+  Extension      = .ttf,
+  UprightFont    = *-Regular,
+]
+\renewcommand{\familydefault}{\sfdefault}
+
 \usepackage[margin=1.5cm,top=1.8cm,bottom=1.5cm]{geometry}
 \usepackage{fancyhdr}
 \usepackage{lastpage}
@@ -12,13 +19,10 @@
 \usepackage{graphicx}
 \usepackage{amssymb}
 \usepackage[table]{xcolor}
-\usepackage{helvet}
 
 % Used by tables on pages 2-4
 \definecolor{formgray}{rgb}{1,1,1}
 \setlength{\fboxsep}{4pt}
-
-\renewcommand{\familydefault}{\sfdefault}
 \setlength{\parindent}{0pt}
 \setlength{\parskip}{0pt}
 \renewcommand{\arraystretch}{1.05}
