@@ -2,7 +2,7 @@
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage[ngerman]{babel}
-\usepackage[margin=1.5cm,top=1.3cm,bottom=1.5cm]{geometry}
+\usepackage[margin=1.5cm,top=1.8cm,bottom=1.5cm]{geometry}
 \usepackage{fancyhdr}
 \usepackage{lastpage}
 \usepackage{tabularx}
@@ -13,7 +13,7 @@
 \usepackage[table]{xcolor}
 \usepackage{helvet}
 
-% The original scan has a white background; keep fills neutral.
+% Used by tables on pages 2-4
 \definecolor{formgray}{rgb}{1,1,1}
 \setlength{\fboxsep}{4pt}
 
@@ -25,89 +25,137 @@
 
 \newcommand{\cb}{\(\square\)}
 \newcommand{\cbx}{\(\boxtimes\)}
+
+% Form section heading: bold text, NOT boxed (original uses plain bold text)
 \newcommand{\formsection}[1]{%
-    \par\vspace{4pt}%
-    \noindent\fcolorbox{black}{formgray}{%
-        \parbox{\dimexpr\textwidth-2\fboxsep-2\fboxrule\relax}{\textbf{#1}}%
-    }%
-    \par\vspace{4pt}%
+    \par\vspace{6pt}%
+    \noindent\textbf{#1}%
+    \par\vspace{6pt}%
 }
+
+% Subsection inside a bordered box
 \newcommand{\formsubsection}[1]{\par\vspace{2pt}\textbf{#1}\par\vspace{2pt}}
+
+% Form field underline
+\newcommand{\formline}[1]{\underline{\hspace{#1}}}
 
 \pagestyle{fancy}
 \fancyhf{}
-\rhead{\thepage}
 \lhead{}
-\cfoot{Seite \thepage}
-\renewcommand{\headrulewidth}{0.4pt}
+\rhead{}
+\rfoot{{\small Seite \thepage}}
+\cfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
 
 \begin{document}
 
+% === HEADER ===
 \noindent
-\begin{minipage}[t]{0.68\textwidth}
-    \Large\textbf{Erhebungsbogen}\\[2pt]
-    \LARGE\textbf{Enzkreis}\\[-1pt]
-    \rule{0.95\linewidth}{1.2pt}
+\begin{minipage}[t]{0.5\textwidth}
+    \vspace{0pt}
+    {\Large\textbf{Erhebungsbogen}}
 \end{minipage}%
-\begin{minipage}[t]{0.3\textwidth}
+\hfill
+\begin{minipage}[t]{0.45\textwidth}
   \raggedleft
-    \vspace{5pt}{\large\textsc{Jobcenter}}\\[-2pt]
-    {\Large\textsc{Enzkreis}}
+  \vspace{0pt}
+  {\LARGE\textbf{Enzkreis}}
 \end{minipage}
 
-\vspace{8pt}
+\vspace{16pt}
 
-\fbox{
-\begin{minipage}[t]{0.96\textwidth}
-  \textbf{Aktenzeichen:} \underline{\hspace{8cm}} \\[4pt]
+% === AKTENZEICHEN BOX ===
+\noindent\fbox{%
+\begin{minipage}[t]{0.62\textwidth}
+  \vspace{4pt}
+  Aktenzeichen: \hspace{0.3cm} \formline{5cm} \\[4pt]
   {\small (falls bekannt / wird ansonsten von Ihrem Jobcenter ausgef\"ullt)}
-\end{minipage}
+  \vspace{2pt}
+\end{minipage}%
 }
 
-\vspace{0.7cm}
+\vspace{10pt}
 
-\formsection{Teil 1 - Pers\"onliche Daten}
+% === TEIL 1 HEADING (no box, just bold text) ===
+\formsection{Teil 1 -- Pers\"onliche Daten}
 
-\formsubsection{Pers\"onliche Informationen}
-\begin{tabularx}{\textwidth}{|>{\raggedright\arraybackslash}p{4.5cm}|X|}
-    \hline
-    \cellcolor{formgray}\textbf{Vorname} & \underline{\hspace{10cm}} \\ \hline
-    \cellcolor{formgray}\textbf{Nachname} & \underline{\hspace{10cm}} \\ \hline
-    \cellcolor{formgray}\textbf{Geburtsdatum} & \underline{\hspace{10cm}} \\ \hline
-    \cellcolor{formgray}\textbf{Staatsangeh\"origkeit} & \underline{\hspace{10cm}} \\ \hline
-\end{tabularx}
+% === PERSOENLICHE INFORMATIONEN (bordered box containing header + fields) ===
+\noindent\fbox{%
+\begin{minipage}[t]{\dimexpr\textwidth-2\fboxsep-2\fboxrule\relax}
+  \vspace{4pt}
+  \textbf{Pers\"onliche Informationen}\\[8pt]
+  \begin{tabularx}{\linewidth}{@{}p{4.2cm}X@{}}
+    Vorname & \formline{8cm} \\[8pt]
+    Nachname & \formline{8cm} \\[8pt]
+    Geburtsdatum & \formline{8cm} \\[8pt]
+    Staatsangeh\"origkeit & \formline{8cm} \\[4pt]
+  \end{tabularx}
+  \vspace{2pt}
+\end{minipage}%
+}
 
-\formsubsection{Kontaktinformationen}
-\begin{tabularx}{\textwidth}{|>{\raggedright\arraybackslash}p{4.5cm}|X|}
-    \hline
-    \cellcolor{formgray}\textbf{Straße und Hausnummer:} & \underline{\hspace{10cm}} \\ \hline
-    \cellcolor{formgray}\textbf{Postleitzahl, Ort:} & \underline{\hspace{10cm}} \\ \hline
-\end{tabularx}
+\vspace{6pt}
 
-\vspace{3pt}
-\begin{tabularx}{\textwidth}{|>{\raggedright\arraybackslash}p{3.2cm}|X|>{\raggedright\arraybackslash}p{3.2cm}|X|}
-    \hline
-    \cellcolor{formgray}\textbf{Telefon:} & \underline{\hspace{4.2cm}} \quad Angaben freiwillig & \cellcolor{formgray} & \\ \hline
-    \cellcolor{formgray}\textbf{Fax:} & \underline{\hspace{4.2cm}} \quad Angaben freiwillig & \cellcolor{formgray}\textbf{E-Mail:} & \underline{\hspace{4.2cm}} \quad Angaben freiwillig \\ \hline
-    \cellcolor{formgray}\textbf{Handy:} & \underline{\hspace{4.2cm}} \quad Angaben freiwillig & \cellcolor{formgray}\textbf{Internetzugang:} & \cb\ ja \quad \cb\ nein \\ \hline
-\end{tabularx}
+% === KONTAKTINFORMATIONEN (bordered box) ===
+\noindent\fbox{%
+\begin{minipage}[t]{\dimexpr\textwidth-2\fboxsep-2\fboxrule\relax}
+  \vspace{4pt}
+  \textbf{Kontaktinformationen}\\[8pt]
+  \begin{tabularx}{\linewidth}{@{}p{4.5cm}X@{}}
+    Stra{\ss}e und Hausnummer: & \formline{9cm} \\[8pt]
+    Postleitzahl, Ort: & \formline{9cm} \\[8pt]
+  \end{tabularx}
+  \begin{tabularx}{\linewidth}{@{}p{2cm}p{5cm}p{3cm}X@{}}
+    Telefon: & \formline{3.5cm} & & \\
+     & {\small Angaben freiwillig} & & \\[4pt]
+    Fax: & \formline{3.5cm} & E-Mail: & \formline{4cm} \\
+     & {\small Angaben freiwillig} & & {\small Angaben freiwillig} \\[4pt]
+    Handy: & \formline{3.5cm} & Internetzugang: & \cb\ ja \quad \cb\ nein \\
+     & {\small Angaben freiwillig} & & \\[2pt]
+  \end{tabularx}
+  \vspace{2pt}
+\end{minipage}%
+}
 
-\formsubsection{Kundendaten}
-\begin{itemize}[leftmargin=*]
-        \item[\cb] Ich bin/werde arbeitslos seit/ab: \underline{\hspace{3cm}} (Monat/Jahr)
-        \item[\cb] Letzte T\"atigkeit/Ausbildung/Sonstiges von: \underline{\hspace{3cm}} (Monat/Jahr)
-        \item[\cb] als \underline{\hspace{8cm}} \\
-            \hspace{0.5cm}{\small T\"atigkeit, Name und Ort des Arbeitgeber/Schule/etc.}
-                \item[\cb] Beziehen Sie Arbeitslosengeld oder haben es beantragt? \cb\ nein \quad \cb\ ja seit \underline{\hspace{3cm}}
-\end{itemize}
+\vspace{6pt}
 
-\vspace{0.5cm}
-\begin{tabular}{p{7cm} p{2cm} p{2cm}}
-Ich habe gesundheitliche Einschr\"ankungen & \cb\ ja & \cb\ nein \\
-Grad der Behinderung & \cb\ schwerbehindert & \cb\ gleichgestellt \\
-Ich habe einen Antrag auf berufliche Rehabilitation gestellt. & \cb\ ja & \cb\ nein \\
-Liegt ein Bescheid vor? & \cb\ ja & \cb\ nein
-\end{tabular}
+% === KUNDENDATEN (bordered box) ===
+\noindent\fbox{%
+\begin{minipage}[t]{\dimexpr\textwidth-2\fboxsep-2\fboxrule\relax}
+  \vspace{4pt}
+  \textbf{Kundendaten}\\[6pt]
+  \begin{tabularx}{\linewidth}{@{}p{4.8cm}X@{}}
+    Ich bin/werde arbeitslos seit/ab: &
+      \formline{7.5cm}\\
+    & \hspace{2.5cm}{\small Monat/Jahr} \\[6pt]
+    Letzte T\"atigkeit/Ausbildung/ Sonstiges von: &
+      \formline{7.5cm}\\
+    & \hspace{2.5cm}{\small Monat/Jahr} \\[6pt]
+    als &
+      \formline{7.5cm}\\
+    & \hspace{1cm}{\small T\"atigkeit, Name und Ort des Arbeitgeber/Schule/etc.} \\[8pt]
+  \end{tabularx}
+  Beziehen Sie Arbeitslosengeld oder haben es beantragt? \quad \cb\ nein \quad \cb\ ja seit \formline{3cm}
+  \vspace{4pt}
+\end{minipage}%
+}
+
+\vspace{6pt}
+
+% === HEALTH / DISABILITY SECTION (bordered box) ===
+\noindent\fbox{%
+\begin{minipage}[t]{\dimexpr\textwidth-2\fboxsep-2\fboxrule\relax}
+  \vspace{4pt}
+  \begin{tabularx}{\linewidth}{@{}Xp{3.2cm}p{2.8cm}@{}}
+    Ich habe gesundheitliche Einschr\"ankungen & \cb\ ja & \cb\ nein \\[6pt]
+    Grad der Behinderung & \cb\ schwerbehindert & \cb\ gleichgestellt \\[6pt]
+    Ich habe einen Antrag auf berufliche Rehabilitation gestellt. & \cb\ ja & \cb\ nein \\[6pt]
+    Liegt ein Bescheid vor? & \cb\ ja & \cb\ nein \\[2pt]
+  \end{tabularx}
+  \vspace{2pt}
+\end{minipage}%
+}
 
 \newpage
 
