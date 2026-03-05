@@ -28,7 +28,7 @@
 \fancyhf{}
 \rhead{\thepage}
 \lhead{}
-\cfoot{}
+\cfoot{Seite \thepage}
 \renewcommand{\headrulewidth}{0.4pt}
 
 \begin{document}
@@ -64,19 +64,19 @@
     \cellcolor{black}\textbf{\textcolor{white}{Vorname}} & \underline{\hspace{10cm}} \\ \hline
     \cellcolor{black}\textbf{\textcolor{white}{Nachname}} & \underline{\hspace{10cm}} \\ \hline
     \cellcolor{black}\textbf{\textcolor{white}{Geburtsdatum}} & \underline{\hspace{10cm}} \\ \hline
-    \cellcolor{black}\textbf{\textcolor{white}{Staatsangeh"origkeit}} & \underline{\hspace{10cm}} \\ \hline
+    \cellcolor{black}\textbf{\textcolor{white}{Staatsangeh\"origkeit}} & \underline{\hspace{10cm}} \\ \hline
 \end{tabularx}
 
 \formsubsection{Kontaktinformationen}
 \begin{tabularx}{\textwidth}{|>{\raggedright\arraybackslash}p{4.5cm}|X|}
     \hline
-    \cellcolor{black}\textbf{\textcolor{white}{Straße und Hausnummer}} & \underline{\hspace{10cm}} \\ \hline
-    \cellcolor{black}\textbf{\textcolor{white}{Postleitzahl, Ort}} & \underline{\hspace{10cm}} \\ \hline
-    \cellcolor{black}\textbf{\textcolor{white}{Telefon}} & \underline{\hspace{6cm}} \quad freiwillig \\ \hline
-    \cellcolor{black}\textbf{\textcolor{white}{Fax}} & \underline{\hspace{6cm}} \quad freiwillig \\ \hline
-    \cellcolor{black}\textbf{\textcolor{white}{E-Mail}} & \underline{\hspace{10cm}} \quad freiwillig \\ \hline
-    \cellcolor{black}\textbf{\textcolor{white}{Handy}} & \underline{\hspace{6cm}} \quad freiwillig \\ \hline
-    \cellcolor{black}\textbf{\textcolor{white}{Internetzugang}} & \cbx\ ja \quad \cb\ nein \\ \hline
+    \cellcolor{black}\textbf{\textcolor{white}{Straße und Hausnummer:}} & \underline{\hspace{10cm}} \\ \hline
+    \cellcolor{black}\textbf{\textcolor{white}{Postleitzahl, Ort:}} & \underline{\hspace{10cm}} \\ \hline
+    \cellcolor{black}\textbf{\textcolor{white}{Telefon:}} & \underline{\hspace{6cm}} \quad Angaben freiwillig \\ \hline
+    \cellcolor{black}\textbf{\textcolor{white}{Fax:}} & \underline{\hspace{6cm}} \quad Angaben freiwillig \\ \hline
+    \cellcolor{black}\textbf{\textcolor{white}{E-Mail:}} & \underline{\hspace{10cm}} \quad Angaben freiwillig \\ \hline
+    \cellcolor{black}\textbf{\textcolor{white}{Handy:}} & \underline{\hspace{6cm}} \quad Angaben freiwillig \\ \hline
+    \cellcolor{black}\textbf{\textcolor{white}{Internetzugang:}} & \cb\ ja \quad \cb\ nein \\ \hline
 \end{tabularx}
 
 \formsubsection{Kundendaten}
@@ -84,13 +84,13 @@
         \item[\cb] Ich bin/werde arbeitslos seit/ab: \underline{\hspace{3cm}} (Monat/Jahr)
         \item[\cb] Letzte T\"atigkeit/Ausbildung/Sonstiges von: \underline{\hspace{3cm}} (Monat/Jahr)
         \item[\cb] als \underline{\hspace{8cm}} \\
-      \hspace{0.5cm}{\small T\"atigkeit, Name und Ort des Arbeitgebers/Schule/etc.}
-        \item[\cb] Beziehen Sie Arbeitslosengeld oder haben es beantragt? \cbx\ nein \quad \cb\ ja seit \underline{\hspace{3cm}}
+            \hspace{0.5cm}{\small T\"atigkeit, Name und Ort des Arbeitgeber/Schule/etc.}
+                \item[\cb] Beziehen Sie Arbeitslosengeld oder haben es beantragt? \cb\ nein \quad \cb\ ja seit \underline{\hspace{3cm}}
 \end{itemize}
 
 \vspace{0.5cm}
 \begin{tabular}{p{7cm} p{2cm} p{2cm}}
-Ich habe gesundheitliche Einschr\"ankungen & \cb\ ja & \cbx\ nein \\
+Ich habe gesundheitliche Einschr\"ankungen & \cb\ ja & \cb\ nein \\
 Grad der Behinderung & \cb\ schwerbehindert & \cb\ gleichgestellt \\
 Ich habe einen Antrag auf berufliche Rehabilitation gestellt. & \cb\ ja & \cb\ nein \\
 Liegt ein Bescheid vor? & \cb\ ja & \cb\ nein
@@ -108,6 +108,7 @@ Liegt ein Bescheid vor? & \cb\ ja & \cb\ nein
     \cb\ Hauptschulabschluss & \\
     \cb\ Mittlere Reife & \\
     \cb\ Fachhochschulreife & \\
+    \cb\ Fachabitur & \\
     \cb\ Abitur & \\
 \end{tabularx}
 
@@ -148,8 +149,8 @@ Schulentlassungsjahr \underline{\hspace{4cm}}
 \begin{tabular}{|l|c|c|}
     \hline
     \textbf{F\"uhrerschein und Fahrzeug} & \textbf{F\"uhrerschein} & \textbf{Fahrzeug vorhanden} \\ \hline
-    \textbf{Kraftrad} & \cbx &  \\ \hline
-    \textbf{PKW} & \cbx & \cbx \\ \hline
+    \textbf{Kraftrad} & \cb &  \\ \hline
+    \textbf{PKW} & \cb & \cb \\ \hline
     \textbf{LKW} &  &  \\ \hline
 \end{tabular}
 
@@ -161,22 +162,9 @@ Schulentlassungsjahr \underline{\hspace{4cm}}
 
 \begin{tabularx}{\textwidth}{|X|c|c|}
     \hline
-    \textbf{Sprache} & \textbf{Grundkenntnisse} & \textbf{gut} \\ \hline
-    Muttersprache: \underline{\hspace{6cm}} &  &  \\ \hline
-    Deutsch & \cb  & \cbx  \\ \hline
-    Englisch & \cb  & \cbx  \\ \hline
-\end{tabularx}
-
-Ich suche eine Stelle als \underline{\hspace{8cm}}
-
-Ich habe mich bisher beworben
-
-\begin{tabularx}{\textwidth}{|X|c|c|c|}
-    \hline
-    \textbf{bei} & \textbf{als} & \textbf{Ergebnis} & \\ \hline
-    (Firma) &  & offen / Absage & \\ \hline
-    &  &  & \\ \hline
-    &  &  & \\ \hline
+    \textbf{Muttersprache: \underline{\hspace{5cm}}} & \textbf{Grundkenntnisse} & \textbf{gut} \\ \hline
+    Deutsch & \cb  & \cb  \\ \hline
+    Englisch & \cb  & \cb  \\ \hline
 \end{tabularx}
 
 Ich suche eine Stelle als \underline{\hspace{8cm}}
@@ -209,13 +197,13 @@ In meinem famili\"aren Umfeld sind folgende Gegebenheiten zu ber\"ucksichtigen:
 \begin{tabular}{|p{9.2cm}|c|c|c|}
     \hline
      & Ja & Nein & Keine Angabe \\ \hline
-    1. Ich besitze die deutsche Staatsangeh\"origkeit. & \cbx & \cb & \cb \\ \hline
-    2 a) Ich bin in Deutschland geboren. & \cbx & \cb & \cb \\ \hline
+    1. Ich besitze die deutsche Staatsangeh\"origkeit. & \cb & \cb & \cb \\ \hline
+    2 a) Ich bin in Deutschland geboren. & \cb & \cb & \cb \\ \hline
     \hspace{0.3cm}{\small (heutiges Gebiet der Bundesrepublik Deutschland)} & & & \\ \hline
     2 b) Ich bin nach 1949 nach Deutschland zugewandert. & \cb & \cb & \cb \\ \hline
     \hspace{0.3cm}{\small (heutiges Gebiet der Bundesrepublik Deutschland)} & & & \\ \hline
-    3 a) Mein Vater ist au{\ss}erhalb Deutschlands geboren und nach 1949 zugewandert. & \cbx & \cb & \cb \\ \hline
-    3 b) Meine Mutter ist au{\ss}erhalb Deutschlands geboren und nach 1949 zugewandert. & \cbx & \cb & \cb \\ \hline
+    3 a) Mein Vater ist au{\ss}erhalb Deutschlands geboren und nach 1949 zugewandert. & \cb & \cb & \cb \\ \hline
+    3 b) Meine Mutter ist au{\ss}erhalb Deutschlands geboren und nach 1949 zugewandert. & \cb & \cb & \cb \\ \hline
 \end{tabular}
 
 \vspace{1cm}
