@@ -11,6 +11,16 @@
 \usepackage{graphicx}
 \usepackage{amssymb}
 \usepackage[table]{xcolor}
+\usepackage{helvet}
+
+\renewcommand{\familydefault}{\sfdefault}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+\renewcommand{\arraystretch}{1.05}
+
+\newcommand{\cb}{\(\square\)}
+\newcommand{\cbx}{\(\boxtimes\)}
+\newcommand{\formsection}[1]{\section*{\normalsize\textbf{#1}}\vspace{-4pt}\rule{\textwidth}{0.4pt}\vspace{3pt}}
 
 \pagestyle{fancy}
 \fancyhf{}
@@ -23,13 +33,14 @@
 
 \noindent
 \begin{minipage}[t]{0.68\textwidth}
-  \large\textbf{Erhebungsbogen}\\[4pt]
-  \LARGE\textbf{Enzkreis}\\[2pt]
-  \hspace*{0.5cm}\rule[0pt]{10cm}{1.5pt}
+    \Large\textbf{Erhebungsbogen}\\[2pt]
+    \LARGE\textbf{Enzkreis}\\[-1pt]
+    \rule{0.95\linewidth}{1.2pt}
 \end{minipage}%
 \begin{minipage}[t]{0.3\textwidth}
   \raggedleft
-  \vspace{8pt}{\Large\textsc{Enzkreis}}
+    \vspace{5pt}{\large\textsc{Jobcenter}}\\[-2pt]
+    {\Large\textsc{Enzkreis}}
 \end{minipage}
 
 \vspace{12pt}
@@ -43,59 +54,59 @@
 
 \vspace{1cm}
 
-\section*{Teil 1 - Pers\"onliche Daten}
+\formsection{Teil 1 - Pers\"onliche Daten}
 
 \subsection*{Pers\"onliche Informationen}
 \begin{tabularx}{\textwidth}{|>{\raggedright\arraybackslash}p{4.5cm}|X|}
     \hline
-    \rowcolor{black}\textbf{\textcolor{white}{Vorname}} & \textcolor{white}{\underline{\hspace{10cm}}} \\ \hline
-    \rowcolor{black}\textbf{\textcolor{white}{Nachname}} & \textcolor{white}{\underline{\hspace{10cm}}} \\ \hline
-    \rowcolor{black}\textbf{\textcolor{white}{Geburtsdatum}} & \textcolor{white}{\underline{\hspace{10cm}}} \\ \hline
-    \rowcolor{black}\textbf{\textcolor{white}{Staatsangeh"origkeit}} & \textcolor{white}{\underline{\hspace{10cm}}} \\ \hline
+    \cellcolor{black}\textbf{\textcolor{white}{Vorname}} & \underline{\hspace{10cm}} \\ \hline
+    \cellcolor{black}\textbf{\textcolor{white}{Nachname}} & \underline{\hspace{10cm}} \\ \hline
+    \cellcolor{black}\textbf{\textcolor{white}{Geburtsdatum}} & \underline{\hspace{10cm}} \\ \hline
+    \cellcolor{black}\textbf{\textcolor{white}{Staatsangeh"origkeit}} & \underline{\hspace{10cm}} \\ \hline
 \end{tabularx}
 
 \subsection*{Kontaktinformationen}
 \begin{tabularx}{\textwidth}{|>{\raggedright\arraybackslash}p{4.5cm}|X|}
     \hline
-    \rowcolor{black}\textbf{\textcolor{white}{Straße und Hausnummer}} & \underline{\hspace{10cm}} \\ \hline
-    \rowcolor{black}\textbf{\textcolor{white}{Postleitzahl, Ort}} & \underline{\hspace{10cm}} \\ \hline
-    \rowcolor{black}\textbf{\textcolor{white}{Telefon}} & \underline{\hspace{6cm}} \quad freiwillig \\ \hline
-    \rowcolor{black}\textbf{\textcolor{white}{Fax}} & \underline{\hspace{6cm}} \quad freiwillig \\ \hline
-    \rowcolor{black}\textbf{\textcolor{white}{E-Mail}} & \underline{\hspace{10cm}} \quad freiwillig \\ \hline
-    \rowcolor{black}\textbf{\textcolor{white}{Handy}} & \underline{\hspace{6cm}} \quad freiwillig \\ \hline
-    \rowcolor{black}\textbf{\textcolor{white}{Internetzugang}} & $\checkmark$ ja \quad $\square$ nein \\ \hline
+    \cellcolor{black}\textbf{\textcolor{white}{Straße und Hausnummer}} & \underline{\hspace{10cm}} \\ \hline
+    \cellcolor{black}\textbf{\textcolor{white}{Postleitzahl, Ort}} & \underline{\hspace{10cm}} \\ \hline
+    \cellcolor{black}\textbf{\textcolor{white}{Telefon}} & \underline{\hspace{6cm}} \quad freiwillig \\ \hline
+    \cellcolor{black}\textbf{\textcolor{white}{Fax}} & \underline{\hspace{6cm}} \quad freiwillig \\ \hline
+    \cellcolor{black}\textbf{\textcolor{white}{E-Mail}} & \underline{\hspace{10cm}} \quad freiwillig \\ \hline
+    \cellcolor{black}\textbf{\textcolor{white}{Handy}} & \underline{\hspace{6cm}} \quad freiwillig \\ \hline
+    \cellcolor{black}\textbf{\textcolor{white}{Internetzugang}} & \cbx\ ja \quad \cb\ nein \\ \hline
 \end{tabularx}
 
 \subsection*{Kundendaten}
 \begin{itemize}[leftmargin=*]
-    \item[$\square$] Ich bin/werde arbeitslos seit/ab: \underline{\hspace{3cm}} (Monat/Jahr)
-    \item[$\square$] Letzte T\"atigkeit/Ausbildung/Sonstiges von: \underline{\hspace{3cm}} (Monat/Jahr)
-    \item[$\square$] als \underline{\hspace{8cm}} \\
+        \item[\cb] Ich bin/werde arbeitslos seit/ab: \underline{\hspace{3cm}} (Monat/Jahr)
+        \item[\cb] Letzte T\"atigkeit/Ausbildung/Sonstiges von: \underline{\hspace{3cm}} (Monat/Jahr)
+        \item[\cb] als \underline{\hspace{8cm}} \\
       \hspace{0.5cm}{\small T\"atigkeit, Name und Ort des Arbeitgebers/Schule/etc.}
-    \item[$\square$] Beziehen Sie Arbeitslosengeld oder haben es beantragt? $\checkmark$ nein \quad $\square$ ja seit \underline{\hspace{3cm}}
+        \item[\cb] Beziehen Sie Arbeitslosengeld oder haben es beantragt? \cbx\ nein \quad \cb\ ja seit \underline{\hspace{3cm}}
 \end{itemize}
 
 \vspace{0.5cm}
 \begin{tabular}{p{7cm} p{2cm} p{2cm}}
-Ich habe gesundheitliche Einschr\"ankungen & $\square$ ja & $\checkmark$ nein \\
-Grad der Behinderung & $\square$ schwerbehindert & $\square$ gleichgestellt \\
-Ich habe einen Antrag auf berufliche Rehabilitation gestellt. & $\square$ ja & $\square$ nein \\
-Liegt ein Bescheid vor? & $\square$ ja & $\square$ nein
+Ich habe gesundheitliche Einschr\"ankungen & \cb\ ja & \cbx\ nein \\
+Grad der Behinderung & \cb\ schwerbehindert & \cb\ gleichgestellt \\
+Ich habe einen Antrag auf berufliche Rehabilitation gestellt. & \cb\ ja & \cb\ nein \\
+Liegt ein Bescheid vor? & \cb\ ja & \cb\ nein
 \end{tabular}
 
 \newpage
 
-\section*{Teil 2 - Berufliche Daten}
+\formsection{Teil 2 - Berufliche Daten}
 {\small (bei Vorlage eines aktuellen und vollst\"andigen Lebenslaufes brauchen Sie die Angaben zur beruflichen Aus- und Weiterbildung und zum beruflichen Werdegang nicht ausf\"ullen)}
 
 \subsection*{Angaben zu Ihrem Schulabschluss}
 \begin{tabularx}{\textwidth}{p{4cm} X}
-    $\square$ kein Schulabschluss & \\
-    $\square$ Abschluss F\"orderschule & \\
-    $\square$ Hauptschulabschluss & \\
-    $\square$ Mittlere Reife & \\
-    $\square$ Fachhochschulreife & \\
-    $\square$ Abitur & \\
+    \cb\ kein Schulabschluss & \\
+    \cb\ Abschluss F\"orderschule & \\
+    \cb\ Hauptschulabschluss & \\
+    \cb\ Mittlere Reife & \\
+    \cb\ Fachhochschulreife & \\
+    \cb\ Abitur & \\
 \end{tabularx}
 
 Schulentlassungsjahr \underline{\hspace{4cm}}
@@ -107,9 +118,9 @@ Schulentlassungsjahr \underline{\hspace{4cm}}
     \textbf{Zeitraum} &  & \textbf{Ausbildungsst\"atte} & \textbf{Ausbildung als} & \textbf{Abschluss} \\ \hline
     \textbf{von} & \textbf{bis} & (Institution bzw. Unternehmen, Ort) & Bezeichnung & ja \quad nein \\ \hline
     Tag/Monat/Jahr & Tag/Monat/Jahr & & & \\ \hline
-    & & & & $\square$ $\square$ \\ \hline
-    & & & & $\square$ $\square$ \\ \hline
-    & & & & $\square$ $\square$ \\ \hline
+    & & & & \cb\ \cb\ \\ \hline
+    & & & & \cb\ \cb\ \\ \hline
+    & & & & \cb\ \cb\ \\ \hline
 \end{tabularx}
 
 \subsection*{Angaben zu Ihrem beruflichen Werdegang}
@@ -135,14 +146,14 @@ Schulentlassungsjahr \underline{\hspace{4cm}}
 \begin{tabular}{|l|c|c|}
     \hline
     \textbf{F\"uhrerschein und Fahrzeug} & \textbf{F\"uhrerschein} & \textbf{Fahrzeug vorhanden} \\ \hline
-    \textbf{Kraftrad} & $\checkmark$ &  \\ \hline
-    \textbf{PKW} & $\checkmark$ & $\checkmark$ \\ \hline
+    \textbf{Kraftrad} & \cbx &  \\ \hline
+    \textbf{PKW} & \cbx & \cbx \\ \hline
     \textbf{LKW} &  &  \\ \hline
 \end{tabular}
 
 \newpage
 
-\section*{Teil 3 - Vorbereitung Vermittlungsgespr\"ach}
+\formsection{Teil 3 - Vorbereitung Vermittlungsgespr\"ach}
 
 \subsection*{Angaben zu Ihren Sprachkenntnissen}
 
@@ -150,8 +161,8 @@ Schulentlassungsjahr \underline{\hspace{4cm}}
     \hline
     \textbf{Sprache} & \textbf{Grundkenntnisse} & \textbf{gut} \\ \hline
     Muttersprache: \underline{\hspace{6cm}} &  &  \\ \hline
-    Deutsch & $\square$  & $\checkmark$  \\ \hline
-    Englisch & $\square$  & $\checkmark$  \\ \hline
+    Deutsch & \cb  & \cbx  \\ \hline
+    Englisch & \cb  & \cbx  \\ \hline
 \end{tabularx}
 
 Ich suche eine Stelle als \underline{\hspace{8cm}}
@@ -184,25 +195,25 @@ Bitte legen Sie meine Bewerbung nicht vor bei (Firma): \underline{\hspace{8cm}}
 In meinem famili\"aren Umfeld sind folgende Gegebenheiten zu ber\"ucksichtigen:
 
 \begin{itemize}[leftmargin=*]
-    \item[$\square$] Kinder unter 15 Jahren im Haushalt \quad Anzahl \underline{\hspace{2cm}} \quad Betreuung sichergestellt $\square$ ja $\square$ nein
-    \item[$\square$] Pflege eines Angeh\"origen
-    \item[$\square$] Sonstige Verpflichtungen
+    \item[\cb] Kinder unter 15 Jahren im Haushalt \quad Anzahl \underline{\hspace{2cm}} \quad Betreuung sichergestellt \cb\ ja \cb\ nein
+    \item[\cb] Pflege eines Angeh\"origen
+    \item[\cb] Sonstige Verpflichtungen
 \end{itemize}
 
 \newpage
 
-\section*{Teil 4 - Angaben zu Ihrem Migrationshintergrund}
+\formsection{Teil 4 - Angaben zu Ihrem Migrationshintergrund}
 
 \begin{tabular}{|p{8cm}|c|c|c|}
     \hline
      & Ja & Nein & Keine Angabe \\ \hline
-    1. Ich besitze die deutsche Staatsangeh\"origkeit. & $\checkmark$ & $\square$ & $\square$ \\ \hline
-    2 a) Ich bin in Deutschland geboren. & $\checkmark$ & $\square$ & $\square$ \\ \hline
+    1. Ich besitze die deutsche Staatsangeh\"origkeit. & \cbx & \cb & \cb \\ \hline
+    2 a) Ich bin in Deutschland geboren. & \cbx & \cb & \cb \\ \hline
     \hspace{0.3cm}{\small (heutiges Gebiet der Bundesrepublik Deutschland)} & & & \\ \hline
-    2 b) Ich bin nach 1949 nach Deutschland zugewandert. & $\square$ & $\square$ & $\square$ \\ \hline
+    2 b) Ich bin nach 1949 nach Deutschland zugewandert. & \cb & \cb & \cb \\ \hline
     \hspace{0.3cm}{\small (heutiges Gebiet der Bundesrepublik Deutschland)} & & & \\ \hline
-    3 a) Mein Vater ist au{\ss}erhalb Deutschlands geboren und nach 1949 zugewandert. & $\checkmark$ & $\square$ & $\square$ \\ \hline
-    3 b) Meine Mutter ist au{\ss}erhalb Deutschlands geboren und nach 1949 zugewandert. & $\checkmark$ & $\square$ & $\square$ \\ \hline
+    3 a) Mein Vater ist au{\ss}erhalb Deutschlands geboren und nach 1949 zugewandert. & \cbx & \cb & \cb \\ \hline
+    3 b) Meine Mutter ist au{\ss}erhalb Deutschlands geboren und nach 1949 zugewandert. & \cbx & \cb & \cb \\ \hline
 \end{tabular}
 
 \vspace{1cm}
@@ -211,9 +222,9 @@ In meinem famili\"aren Umfeld sind folgende Gegebenheiten zu ber\"ucksichtigen:
 \begin{tabular}{|p{8cm}|c|c|c|}
     \hline
      & Ja & Nein & Keine Angabe \\ \hline
-    4 a) Ich habe die deutsche Staatsangeh\"origkeit als Aussiedler oder Sp\"ataussiedler erworben. & $\square$ & $\square$ & $\square$ \\ \hline
-    4 b) Ich habe die deutsche Staatsangeh\"origkeit als Ehegatte / Ehegattin eines (Sp\"at-)Aussiedlers erworben. & $\square$ & $\square$ & $\square$ \\ \hline
-    4 c) Ich habe die deutsche Staatsangeh\"origkeit als Kind oder Enkelkind eines (Sp\"at-)Aussiedlers erworben. & $\square$ & $\square$ & $\square$ \\ \hline
+    4 a) Ich habe die deutsche Staatsangeh\"origkeit als Aussiedler oder Sp\"ataussiedler erworben. & \cb & \cb & \cb \\ \hline
+    4 b) Ich habe die deutsche Staatsangeh\"origkeit als Ehegatte / Ehegattin eines (Sp\"at-)Aussiedlers erworben. & \cb & \cb & \cb \\ \hline
+    4 c) Ich habe die deutsche Staatsangeh\"origkeit als Kind oder Enkelkind eines (Sp\"at-)Aussiedlers erworben. & \cb & \cb & \cb \\ \hline
 \end{tabular}
 
 \vspace{2cm}
