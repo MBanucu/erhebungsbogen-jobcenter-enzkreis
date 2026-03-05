@@ -87,7 +87,7 @@
 \begin{minipage}[t]{\dimexpr\textwidth-2\fboxsep-2\fboxrule\relax}
   \vspace{3pt}
   \textbf{Pers\"onliche Informationen}\\[6pt]
-  \begin{tabularx}{\linewidth}{@{}p{3.8cm}p{7cm}@{}}
+  \begin{tabularx}{\linewidth}{@{}p{3.8cm}X@{}}
     Vorname & \formline{5cm} \\[8pt]
     Nachname & \formline{5cm} \\[8pt]
     Geburtsdatum & \formline{5cm} \\[8pt]
@@ -104,7 +104,7 @@
 \begin{minipage}[t]{\dimexpr\textwidth-2\fboxsep-2\fboxrule\relax}
   \vspace{3pt}
   \textbf{Kontaktinformationen}\\[6pt]
-  \begin{tabularx}{\linewidth}{@{}p{4.2cm}p{9cm}@{}}
+  \begin{tabularx}{\linewidth}{@{}p{4.2cm}X@{}}
     Stra{\ss}e und Hausnummer: & \formline{7.5cm} \\[8pt]
     Postleitzahl, Ort: & \formline{7.5cm} \\[6pt]
   \end{tabularx}
@@ -162,61 +162,93 @@
 
 \newpage
 
-\formsection{Teil 2 - Berufliche Daten}
-{\small (bei Vorlage eines aktuellen und vollst\"andigen Lebenslaufes brauchen Sie die Angaben zur beruflichen Aus- und Weiterbildung und zum beruflichen Werdegang nicht ausf\"ullen)}
+% === TEIL 2 HEADING (inside bordered box with parenthetical text) ===
+\noindent\fbox{%
+\begin{minipage}[t]{\dimexpr\textwidth-2\fboxsep-2\fboxrule\relax}
+  \vspace{2pt}
+  \textbf{Teil 2 \textendash{} Berufliche Daten (bei Vorlage eines aktuellen und vollst\"andigen
+  Lebenslaufes brauchen Sie die Angaben zur beruflichen Aus- und Weiterbildung
+  und zum beruflichen Werdegang nicht ausf\"ullen)}
+  \vspace{2pt}
+\end{minipage}%
+}
 
-\formsubsection{Angaben zu Ihrem Schulabschluss}
-\begin{tabularx}{\textwidth}{p{4cm} X}
-    \cb\ kein Schulabschluss & \\
-    \cb\ Abschluss F\"orderschule & \\
-    \cb\ Hauptschulabschluss & \\
-    \cb\ Mittlere Reife & \\
-    \cb\ Fachhochschulreife & \\
-    \cb\ Fachabitur & \\
-    \cb\ Abitur & \\
+\vspace{6pt}
+
+% === SCHULABSCHLUSS (bold heading, two-column checkboxes, no box) ===
+\textbf{Angaben zu Ihrem Schulabschluss}
+
+\vspace{4pt}
+
+\begin{tabularx}{\textwidth}{@{\hspace{6pt}}p{5.5cm}X@{}}
+    \cb\ kein Schulabschluss & \cb\ Fachhochschulreife \\[6pt]
+    \cb\ Abschluss F\"orderschule & \cb\ Fachabitur \\[6pt]
+    \cb\ Hauptschulabschluss & \cb\ Abitur \\[6pt]
+    \cb\ Mittlere Reife & \\[4pt]
 \end{tabularx}
 
-Schulentlassungsjahr \underline{\hspace{4cm}}
+\textbf{Schulentlassungsjahr} \quad \formline{3cm}
 
-\formsubsection{Angaben zu Ihrer beruflichen Aus- und Weiterbildung}
+\vspace{8pt}
 
-\begin{tabularx}{\textwidth}{|c|c|X|c|c|}
+% === BERUFLICHE AUS- UND WEITERBILDUNG (bold heading, no box) ===
+\textbf{Angaben zu Ihrer beruflichen Aus- und Weiterbildung}
+
+\vspace{2pt}
+
+\newcommand{\tablestrut}{\rule{0pt}{16pt}}
+\begin{tabularx}{\textwidth}{|p{2.2cm}|p{2.2cm}|X|p{2.8cm}|p{0.7cm}p{0.7cm}|}
     \hline
-    \rowcolor{formgray}\textbf{Zeitraum} &  & \textbf{Ausbildungsst\"atte} & \textbf{Ausbildung als} & \textbf{Abschluss} \\ \hline
-    \textbf{von} & \textbf{bis} & (Institution bzw. Unternehmen, Ort) & Bezeichnung & ja \quad nein \\ \hline
-    Tag/Monat/Jahr & Tag/Monat/Jahr & & & \\ \hline
-    & & & & \cb\ \cb\ \\ \hline
-    & & & & \cb\ \cb\ \\ \hline
-    & & & & \cb\ \cb\ \\ \hline
+    \multicolumn{2}{|c|}{Zeitraum} & Ausbildungsst\"atte & Ausbildung als & \multicolumn{2}{c|}{Abschluss} \\
+    \hline
+    \centering von\\{\scriptsize Tag/Monat/Jahr} & \centering bis\\{\scriptsize Tag/Monat/Jahr} & (Institution bzw. Unternehmen, Ort) & Bezeichnung & \centering ja & \hspace{2pt}nein \tabularnewline
+    \hline
+    \tablestrut & & & & \centering \cb & \hspace{2pt}\cb \tabularnewline \hline
+    \tablestrut & & & & \centering \cb & \hspace{2pt}\cb \tabularnewline \hline
+    \tablestrut & & & & \centering \cb & \hspace{2pt}\cb \tabularnewline \hline
 \end{tabularx}
 
-\formsubsection{Angaben zu Ihrem beruflichen Werdegang}
+\vspace{8pt}
 
-\begin{tabularx}{\textwidth}{|c|c|X|c|}
+% === BERUFLICHER WERDEGANG (bold heading, no box) ===
+\textbf{Angaben zu Ihrem beruflichen Werdegang}
+
+\vspace{2pt}
+
+\begin{tabularx}{\textwidth}{|p{2.2cm}|p{2.2cm}|X|p{3cm}|}
     \hline
-    \rowcolor{formgray}\textbf{Zeitraum} &  & \textbf{Besch\"aftigungsstelle} & \textbf{T\"atigkeit als} \\ \hline
-    \textbf{von} & \textbf{bis} & (Name, Ort) & Bezeichnung \\ \hline
-    Tag/Monat/Jahr & Tag/Monat/Jahr & & \\ \hline
-    & & & \\ \hline
-    & & & \\ \hline
-    & & & \\ \hline
-    & & & \\ \hline
-    & & & \\ \hline
-    & & & \\ \hline
-    & & & \\ \hline
-    & & & \\ \hline
-    & & & \\ \hline
+    \multicolumn{2}{|c|}{Zeitraum} & Besch\"aftigungsstelle & T\"atigkeit als \\
+    \hline
+    \centering von\newline{\scriptsize Tag/Monat/Jahr} & \centering bis\newline{\scriptsize Tag/Monat/Jahr} & (Name, Ort) & Bezeichnung \tabularnewline
+    \hline
+    \tablestrut & & & \tabularnewline \hline
+    \tablestrut & & & \tabularnewline \hline
+    \tablestrut & & & \tabularnewline \hline
+    \tablestrut & & & \tabularnewline \hline
+    \tablestrut & & & \tabularnewline \hline
+    \tablestrut & & & \tabularnewline \hline
+    \tablestrut & & & \tabularnewline \hline
+    \tablestrut & & & \tabularnewline \hline
 \end{tabularx}
 
-\formsubsection{Angaben zu Ihrer Mobilit\"at}
+\vspace{8pt}
 
-\begin{tabular}{|l|c|c|}
-    \hline
-    \rowcolor{formgray}\textbf{F\"uhrerschein und Fahrzeug} & \textbf{F\"uhrerschein} & \textbf{Fahrzeug vorhanden} \\ \hline
-    \textbf{Kraftrad} & \cb &  \\ \hline
-    \textbf{PKW} & \cb & \cb \\ \hline
-    \textbf{LKW} &  &  \\ \hline
-\end{tabular}
+% === MOBILIT\"AT (bordered box around entire section) ===
+\noindent\fbox{%
+\begin{minipage}[t]{\dimexpr\textwidth-2\fboxsep-2\fboxrule\relax}
+  \vspace{2pt}
+  \textbf{Angaben zu Ihrer Mobilit\"at}
+  \vspace{4pt}
+
+  \begin{tabularx}{\linewidth}{@{}p{5cm}p{3cm}X@{}}
+    F\"uhrerschein und Fahrzeug & F\"uhrerschein & Fahrzeug vorhanden \\[8pt]
+    Kraftrad & \hspace{0.5cm}\cb & \hspace{1.2cm}\cb \\[8pt]
+    PKW & \hspace{0.5cm}\cb & \hspace{1.2cm}\cb \\[8pt]
+    LKW & \hspace{0.5cm}\cb & \\[4pt]
+  \end{tabularx}
+  \vspace{1pt}
+\end{minipage}%
+}
 
 \newpage
 
