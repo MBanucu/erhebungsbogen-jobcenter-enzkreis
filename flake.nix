@@ -44,13 +44,6 @@
             ghostscript
 
             bashInteractive
-
-            liberation_ttf
-            # Add Nerd Fonts here – pick what you need
-            nerd-fonts.jetbrains-mono
-            nerd-fonts.fira-code
-            # nerd-fonts.hack
-            # nerd-fonts.iosevka   # very nice for code & terminals
           ];
 
           shellHook = ''
@@ -60,9 +53,6 @@
             echo ""
             echo "Tipp für VSCode / Neovim:"
             echo "  Stelle latex-workshop oder texlab auf tectonic ein"
-
-            echo "Nerd Fonts loaded: JetBrains Mono, Fira Code, …"
-            fc-match "JetBrainsMono Nerd Font"   # should now find it
           '';
         };
 
