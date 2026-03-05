@@ -327,4 +327,5 @@ TSWLatexianTemp*
 
 .direnv/
 
+fonts/
 build
