@@ -2,7 +2,7 @@
 
 set -euo pipefail
 
-tectonic main.tex --outdir=build
+tectonic main.tex --outdir=build --keep-intermediates -Z search-path=./fonts
 
 # convert pdf to jpg
 for file in build/*.pdf; do

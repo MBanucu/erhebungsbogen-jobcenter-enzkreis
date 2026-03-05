@@ -6,14 +6,19 @@
     flake-utils.url = "github:numtide/flake-utils";
   };
 
-  outputs = { self, nixpkgs, flake-utils }:
-    flake-utils.lib.eachDefaultSystem (system:
+  outputs =
+    {
+      self,
+      nixpkgs,
+      flake-utils,
+    }:
+    flake-utils.lib.eachDefaultSystem (
+      system:
       let
         pkgs = import nixpkgs {
           inherit system;
           # config.allowUnfree = true;   # falls du später unfree-Pakete brauchst (z. B. bestimmte Fonts)
         };
-
       in
       {
         # ────────────────────────────────────────────────
@@ -23,15 +28,15 @@
           name = "latex-tectonic-shell";
 
           packages = with pkgs; [
-            tectonic               # der Star: selbstständiges LaTeX → tectonic main.tex
-            texlab                 # LSP-Server → gut für neovim, helix, vscode + latex-workshop
+            tectonic # der Star: selbstständiges LaTeX → tectonic main.tex
+            texlab # LSP-Server → gut für neovim, helix, vscode + latex-workshop
             # latexindent          # Formatter (optional)
             # tex-fmt              # alternativer Formatter
 
             # Hilfreiche Tools
-            zathura                # leichter PDF-Viewer mit SyncTeX-Unterstützung
+            zathura # leichter PDF-Viewer mit SyncTeX-Unterstützung
             # okular               # alternativer Viewer mit mehr Features
-            graphviz               # falls du dot-Grafiken in LaTeX einbindest
+            graphviz # falls du dot-Grafiken in LaTeX einbindest
             # pandoc             # für Markdown → LaTeX Konvertierungen
 
             # convert pdf to jpg
@@ -39,6 +44,13 @@
             ghostscript
 
             bashInteractive
+
+            liberation_ttf
+            # Add Nerd Fonts here – pick what you need
+            nerd-fonts.jetbrains-mono
+            nerd-fonts.fira-code
+            # nerd-fonts.hack
+            # nerd-fonts.iosevka   # very nice for code & terminals
           ];
 
           shellHook = ''
@@ -48,6 +60,9 @@
             echo ""
             echo "Tipp für VSCode / Neovim:"
             echo "  Stelle latex-workshop oder texlab auf tectonic ein"
+
+            echo "Nerd Fonts loaded: JetBrains Mono, Fira Code, …"
+            fc-match "JetBrainsMono Nerd Font"   # should now find it
           '';
         };
 
