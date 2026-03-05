@@ -1,0 +1,199 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[ngerman]{babel}
+\usepackage{geometry}
+\geometry{margin=2cm,top=1.8cm,bottom=2cm}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage{enumitem}
+\usepackage{graphicx} % falls du später Logo einfügen willst
+\usepackage{amssymb}
+\usepackage{calc}
+\usepackage{xcolor}
+\definecolor{graybg}{gray}{0.92}
+
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{\thepage\ von \pageref{LastPage}}
+\lhead{Erhebungsbogen \quad Enzkreis}
+\renewcommand{\headrulewidth}{0.4pt}
+
+\begin{document}
+
+\begin{center}
+    \Large\textbf{Erhebungsbogen} \\[4pt]
+    % \includegraphics[width=3cm]{logo-placeholder} % Ersetze durch echtes Logo, falls vorhanden \\[2pt]
+    \Huge \textbf{Enzkreis} \\[6pt]
+    \normalsize \textit{(Logo / Signet Enzkreis)}
+\end{center}
+
+\vspace{8pt}
+
+\noindent
+\fbox{
+    \parbox{\dimexpr\textwidth-2\fboxsep-2\fboxrule}{
+        \textbf{Aktenzeichen:} \underline{\hspace{8cm}} \\
+        \small{(falls bekannt / wird ansonsten von Ihrem Jobcenter ausgefüllt)}
+    }
+}
+
+\vspace{1cm}
+
+\section*{Teil 1 – Persönliche Daten}
+
+\subsection*{Persönliche Informationen}
+\begin{tabularx}{\textwidth}{|>{\raggedright\arraybackslash}p{4.5cm}|X|}
+    \hline
+    \textbf{Vorname} & \underline{\hspace{10cm}} \\ \hline
+    \textbf{Nachname} & \underline{\hspace{10cm}} \\ \hline
+    \textbf{Geburtsdatum} & \underline{\hspace{10cm}} \\ \hline
+    \textbf{Staatsangehörigkeit} & \underline{\hspace{10cm}} \\ \hline
+\end{tabularx}
+
+\subsection*{Kontaktinformationen}
+\begin{tabularx}{\textwidth}{|>{\raggedright\arraybackslash}p{4.5cm}|X|}
+    \hline
+    \textbf{Straße und Hausnummer:} & \underline{\hspace{10cm}} \\ \hline
+    \textbf{Postleitzahl, Ort:} & \underline{\hspace{10cm}} \\ \hline
+    \textbf{Telfon:} & \underline{\hspace{6cm}} \quad {\small Angeben freiwillig} \\ \hline
+    \textbf{Fax:} & \underline{\hspace{6cm}} \quad {\small Angeben freiwillig} \\ \hline
+    \textbf{E-Mail:} & \underline{\hspace{10cm}} \quad {\small Angeben freiwillig} \\ \hline
+    \textbf{Handy:} & \underline{\hspace{6cm}} \quad {\small Angeben freiwillig} \\ \hline
+    \textbf{Internetzugang:} & $\boxtimes$ ja \quad $\square$ nein \\ \hline
+\end{tabularx}
+
+\subsection*{Kundendaten}
+\begin{itemize}[leftmargin=*]
+    \item Ich bin/werde arbeitslos seit/ab: \underline{\hspace{3cm}} (Monat/Jahr)
+    \item Letzte Tätigkeit/Ausbildung/Sonstiges von: \underline{\hspace{3cm}} (Monat/Jahr)
+    \item als \underline{\hspace{8cm}} \\
+      \small{Tätigkeit, Name und Ort des Arbeitgebers/Schule/etc.}
+    \item Beziehen Sie Arbeitslosengeld oder haben es beantragt? $\boxtimes$ nein \quad $\square$ ja seit \underline{\hspace{3cm}}
+\end{itemize}
+
+\vspace{0.5cm}
+Ich habe gesundheitliche Einschränkungen \quad $\square$ ja \quad $\boxtimes$ nein \\[4pt]
+Grad der Behinderung \quad $\square$ schwerbehindert \quad $\square$ gleichgestellt \\[4pt]
+Ich habe einen Antrag auf berufliche Rehabilitation gestellt. \quad $\square$ ja \quad $\square$ nein \\[4pt]
+Liegt ein Bescheid vor? \quad $\square$ ja \quad $\square$ nein
+
+\newpage
+
+\section*{Teil 2 – Berufliche Daten}
+{\small (bei Vorlage eines aktuellen und vollständigen Lebenslaufes brauchen Sie die Angaben zur beruflichen Aus- und Weiterbildung und zum beruflichen Werdegang nicht ausfüllen)}
+
+\subsection*{Angaben zu Ihrem Schulabschluss}
+\begin{itemize}[label=$\square$]
+    \item kein Schulabschluss \item Fachhochschulreife
+    \item Abschluss Förderschule \item Fachabitur
+    \item Hauptschulabschluss \item Abitur
+    \item Mittlere Reife
+\end{itemize}
+
+Schulentlassungsjahr \underline{\hspace{4cm}}
+
+\subsection*{Angaben zu Ihrer beruflichen Aus- und Weiterbildung}
+
+\begin{tabularx}{\textwidth}{|c|c|X|c|c|}
+    \hline
+    \textbf{Zeitraum} & & \textbf{Ausbildungsstätte} & \textbf{Ausbildung als} & \textbf{Abschluss} \\ 
+    \cline{1-2}
+    von & bis & (Institution bzw. Unternehmen, Ort) & Bezeichnung & ja \quad nein \\ \hline
+    & & & & $\square$ $\square$ \\ \hline
+    & & & & $\square$ $\square$ \\ \hline
+    & & & & $\square$ $\square$ \\ \hline
+\end{tabularx}
+
+\subsection*{Angaben zu Ihrem beruflichen Werdegang}
+
+\begin{tabularx}{\textwidth}{|c|c|X|c|}
+    \hline
+    \textbf{Zeitraum} & & \textbf{Beschäftigungsstelle} & \textbf{Tätigkeit als} \\ 
+    \cline{1-2}
+    von & bis & (Name, Ort) & Bezeichnung \\ \hline
+    & & & \\ \hline
+    & & & \\ \hline
+    & & & \\ \hline
+\end{tabularx}
+
+\subsection*{Angaben zu Ihrer Mobilität}
+
+\begin{tabular}{|l|c|c|}
+    \hline
+    \textbf{Führerschein und Fahrzeug} & \textbf{Führerschein} & \textbf{Fahrzeug vorhanden} \\ \hline
+    \textbf{Kraftrad} & $\boxtimes$ & $\square$ \\ \hline
+    \textbf{PKW} & $\boxtimes$ & $\boxtimes$ \\ \hline
+    \textbf{LKW} & $\square$ &  \\ \hline
+\end{tabular}
+
+\newpage
+
+\section*{Teil 3 – Vorbereitung Vermittlungsgespräch}
+
+\subsection*{Angaben zu Ihren Sprachkenntnissen}
+
+\begin{tabularx}{\textwidth}{|X|c|c|}
+    \hline
+    \textbf{Muttersprache} & \underline{\hspace{6cm}} & Grundkenntnisse / gut \\ \hline
+    Deutsch & $\square$ Grundkenntnisse & $\boxtimes$ gut \\ \hline
+    Englisch & $\square$ Grundkenntnisse & $\boxtimes$ gut \\ \hline
+\end{tabularx}
+
+Ich suche eine Stelle als \underline{\hspace{8cm}}
+
+Ich habe mich bisher beworben
+
+\begin{tabularx}{\textwidth}{|X|c|c|c|}
+    \hline
+    bei & als & Ergebnis & \\
+    \hline
+    ... & ... & offen / Absage & \\
+    % Füge hier Zeilen ein, wie in deinem Scan
+    \hline
+\end{tabularx}
+
+Bitte legen Sie meine Bewerbung nicht vor bei (Firma): \underline{\hspace{8cm}}
+
+\subsection*{Familiäres Umfeld}
+In meinem familiären Umfeld sind folgende Gegebenheiten zu berücksichtigen:
+
+\begin{itemize}[label=$\square$]
+    \item Kinder unter 15 Jahren im Haushalt \quad Anzahl \underline{\hspace{2cm}} \quad Betreuung sichergestellt $\square$ ja $\square$ nein
+    \item Pflege eines Angehörigen
+    \item Sonstige Verpflichtungen
+\end{itemize}
+
+\newpage
+
+\section*{Teil 4 – Angaben zu Ihrem Migrationshintergrund}
+
+\begin{tabular}{|l|c|c|c|}
+    \hline
+    & Ja & Nein & Keine Angabe \\ \hline
+    1. Ich besitze die deutsche Staatsangehörigkeit. & $\boxtimes$ & $\square$ & $\square$ \\ \hline
+    2 a) Ich bin in Deutschland geboren. & $\boxtimes$ & $\square$ & $\square$ \\ \hline
+    2 b) Ich bin nach 1949 nach Deutschland zugewandert. & $\square$ & $\square$ & $\square$ \\ \hline
+    3 a) Mein Vater ist außerhalb Deutschlands geboren und nach 1949 zugewandert. & $\boxtimes$ & $\square$ & $\square$ \\ \hline
+    3 b) Meine Mutter ist außerhalb Deutschlands geboren und nach 1949 zugewandert. & $\boxtimes$ & $\square$ & $\square$ \\ \hline
+\end{tabular}
+
+Zusätzliche Fragen für deutsche Staatsangehörige, die nach 1949 zugewandert sind (Frage 1 „Ja“ und Frage 2b „Ja“):
+
+\begin{tabular}{|l|c|c|c|}
+    \hline
+    & Ja & Nein & Keine Angabe \\ \hline
+    4 a) ... als Aussiedler oder Spätaussiedler erworben. & $\square$ & $\square$ & $\square$ \\ \hline
+    4 b) ... als Ehegatte ... erworben. & $\square$ & $\square$ & $\square$ \\ \hline
+    4 c) ... als Kind oder Enkelkind ... erworben. & $\square$ & $\square$ & $\square$ \\ \hline
+\end{tabular}
+
+\vspace{2cm}
+
+\begin{center}
+    \small Ort, Datum \hfill Unterschrift
+\end{center}
+
+\end{document}
