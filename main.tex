@@ -252,39 +252,62 @@
 
 \newpage
 
-\formsection{Teil 3 - Vorbereitung Vermittlungsgespr\"ach}
+% === SPRACHKENNTNISSEN (bordered box, at top of page 3) ===
+\noindent\fbox{%
+\begin{minipage}[t]{\dimexpr\textwidth-2\fboxsep-2\fboxrule\relax}
+  \vspace{3pt}
+  \textbf{Angaben zu Ihren Sprachkenntnissen}\\[8pt]
+  \begin{tabularx}{\linewidth}{@{}p{3cm}X@{}}
+    Muttersprache & \formline{8cm} \\[6pt]
+  \end{tabularx}
+  \begin{tabularx}{\linewidth}{@{}p{3cm}Xcc@{}}
+     & & Grundkenntnisse & gut \\[4pt]
+    Deutsch & & \cb & \cb \\[6pt]
+    Englisch & & \cb & \cb \\[4pt]
+  \end{tabularx}
+  \vspace{1pt}
+\end{minipage}%
+}
 
-\formsubsection{Angaben zu Ihren Sprachkenntnissen}
+\vspace{12pt}
 
-\begin{tabularx}{\textwidth}{|X|c|c|}
+% === TEIL 3 HEADING (bold text, NOT boxed, en-dash) ===
+\formsection{Teil 3 \textendash{} Vorbereitung Vermittlungsgespr\"ach}
+
+% === LARGE BORDERED BOX containing Bewerbung + Famili\"ares Umfeld ===
+\noindent\fbox{%
+\begin{minipage}[t]{\dimexpr\textwidth-2\fboxsep-2\fboxrule\relax}
+  \vspace{4pt}
+  \textbf{Ich suche eine Stelle als} \formline{9.5cm}\\[4pt]
+  \noindent\rule{\linewidth}{0.4pt}\\[4pt]
+  \textbf{Ich habe mich bisher beworben}\hfill \textbf{Ergebnis}\\[4pt]
+  \begin{tabularx}{\linewidth}{|X|p{3.5cm}|c|c|}
     \hline
-    \rowcolor{formgray}\textbf{Muttersprache: \underline{\hspace{5cm}}} & \textbf{Grundkenntnisse} & \textbf{gut} \\ \hline
-    Deutsch & \cb  & \cb  \\ \hline
-    Englisch & \cb  & \cb  \\ \hline
-\end{tabularx}
-
-Ich suche eine Stelle als \underline{\hspace{8cm}}
-
-Ich habe mich bisher beworben
-
-\begin{tabularx}{\textwidth}{|X|c|c|c|}
+    bei & als & offen & Absage \tabularnewline
     \hline
-    \rowcolor{formgray}\textbf{bei} & \textbf{als} & \textbf{Ergebnis} & \\ \hline
-    (Firma) &  & offen / Absage & \\ \hline
-    &  &  & \\ \hline
-    &  &  & \\ \hline
-\end{tabularx}
-
-Bitte legen Sie meine Bewerbung nicht vor bei (Firma): \underline{\hspace{8cm}}
-
-\formsubsection{Famili\"ares Umfeld}
-In meinem famili\"aren Umfeld sind folgende Gegebenheiten zu ber\"ucksichtigen:
-
-\begin{itemize}[leftmargin=*]
-    \item[\cb] Kinder unter 15 Jahren im Haushalt \quad Anzahl \underline{\hspace{2cm}} \quad Betreuung sichergestellt \cb\ ja \cb\ nein
-    \item[\cb] Pflege eines Angeh\"origen
-    \item[\cb] Sonstige Verpflichtungen
-\end{itemize}
+    \tablestrut & & \cb & \cb \tabularnewline \hline
+    \tablestrut & & \cb & \cb \tabularnewline \hline
+    \tablestrut & & \cb & \cb \tabularnewline \hline
+    \tablestrut & & \cb & \cb \tabularnewline \hline
+    \tablestrut & & \cb & \cb \tabularnewline \hline
+    \tablestrut & & \cb & \cb \tabularnewline \hline
+  \end{tabularx}
+  \vspace{6pt}\\
+  Bitte legen Sie meine Bewerbung nicht vor bei (Firma): \formline{6cm}\\[4pt]
+  \noindent\rule{\linewidth}{0.4pt}\\[4pt]
+  \textbf{Famili\"ares Umfeld}\\[4pt]
+  \noindent\rule{\linewidth}{0.4pt}\\[4pt]
+  In meinem famili\"aren Umfeld sind folgende Gegebenheiten zu ber\"ucksichtigen:\\[8pt]
+  \hspace{6mm}\begin{tabularx}{\dimexpr\linewidth-6mm\relax}{@{}p{0.6cm}p{6.5cm}X@{}}
+    & & \hfill Betreuung sichergestellt \\[2pt]
+    \cb & Kinder unter 15 Jahren im Haushalt & \hfill \cb\ ja \hspace{1.5cm} \cb\ nein \\
+    & Anzahl \formline{3cm} & \\[6pt]
+    \cb & Pflege eines Angeh\"origen & \\[6pt]
+    \cb & Sonstige Verpflichtungen & \\[4pt]
+  \end{tabularx}
+  \vspace{2pt}
+\end{minipage}%
+}
 
 \newpage
 
