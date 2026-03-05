@@ -1,8 +1,8 @@
-\documentclass[11pt,a4paper]{article}
+\documentclass[10pt,a4paper]{article}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage[ngerman]{babel}
-\usepackage[margin=2cm,top=1.8cm,bottom=2cm]{geometry}
+\usepackage[margin=1.5cm,top=1.3cm,bottom=1.5cm]{geometry}
 \usepackage{fancyhdr}
 \usepackage{lastpage}
 \usepackage{tabularx}
@@ -17,16 +17,18 @@
 \setlength{\parindent}{0pt}
 \setlength{\parskip}{0pt}
 \renewcommand{\arraystretch}{1.05}
+\setlist[itemize]{leftmargin=*,itemsep=1pt,topsep=2pt,parsep=0pt}
 
 \newcommand{\cb}{\(\square\)}
 \newcommand{\cbx}{\(\boxtimes\)}
 \newcommand{\formsection}[1]{\section*{\normalsize\textbf{#1}}\vspace{-4pt}\rule{\textwidth}{0.4pt}\vspace{3pt}}
+\newcommand{\formsubsection}[1]{\par\vspace{2pt}\textbf{#1}\par\vspace{2pt}}
 
 \pagestyle{fancy}
 \fancyhf{}
 \rhead{\thepage}
-\lhead{Erhebungsbogen \quad Enzkreis}
-\cfoot{Seite \thepage}
+\lhead{}
+\cfoot{}
 \renewcommand{\headrulewidth}{0.4pt}
 
 \begin{document}
@@ -43,7 +45,7 @@
     {\Large\textsc{Enzkreis}}
 \end{minipage}
 
-\vspace{12pt}
+\vspace{8pt}
 
 \fbox{
 \begin{minipage}[t]{0.96\textwidth}
@@ -52,11 +54,11 @@
 \end{minipage}
 }
 
-\vspace{1cm}
+\vspace{0.7cm}
 
 \formsection{Teil 1 - Pers\"onliche Daten}
 
-\subsection*{Pers\"onliche Informationen}
+\formsubsection{Pers\"onliche Informationen}
 \begin{tabularx}{\textwidth}{|>{\raggedright\arraybackslash}p{4.5cm}|X|}
     \hline
     \cellcolor{black}\textbf{\textcolor{white}{Vorname}} & \underline{\hspace{10cm}} \\ \hline
@@ -65,7 +67,7 @@
     \cellcolor{black}\textbf{\textcolor{white}{Staatsangeh"origkeit}} & \underline{\hspace{10cm}} \\ \hline
 \end{tabularx}
 
-\subsection*{Kontaktinformationen}
+\formsubsection{Kontaktinformationen}
 \begin{tabularx}{\textwidth}{|>{\raggedright\arraybackslash}p{4.5cm}|X|}
     \hline
     \cellcolor{black}\textbf{\textcolor{white}{Straße und Hausnummer}} & \underline{\hspace{10cm}} \\ \hline
@@ -77,7 +79,7 @@
     \cellcolor{black}\textbf{\textcolor{white}{Internetzugang}} & \cbx\ ja \quad \cb\ nein \\ \hline
 \end{tabularx}
 
-\subsection*{Kundendaten}
+\formsubsection{Kundendaten}
 \begin{itemize}[leftmargin=*]
         \item[\cb] Ich bin/werde arbeitslos seit/ab: \underline{\hspace{3cm}} (Monat/Jahr)
         \item[\cb] Letzte T\"atigkeit/Ausbildung/Sonstiges von: \underline{\hspace{3cm}} (Monat/Jahr)
@@ -99,7 +101,7 @@ Liegt ein Bescheid vor? & \cb\ ja & \cb\ nein
 \formsection{Teil 2 - Berufliche Daten}
 {\small (bei Vorlage eines aktuellen und vollst\"andigen Lebenslaufes brauchen Sie die Angaben zur beruflichen Aus- und Weiterbildung und zum beruflichen Werdegang nicht ausf\"ullen)}
 
-\subsection*{Angaben zu Ihrem Schulabschluss}
+\formsubsection{Angaben zu Ihrem Schulabschluss}
 \begin{tabularx}{\textwidth}{p{4cm} X}
     \cb\ kein Schulabschluss & \\
     \cb\ Abschluss F\"orderschule & \\
@@ -111,7 +113,7 @@ Liegt ein Bescheid vor? & \cb\ ja & \cb\ nein
 
 Schulentlassungsjahr \underline{\hspace{4cm}}
 
-\subsection*{Angaben zu Ihrer beruflichen Aus- und Weiterbildung}
+\formsubsection{Angaben zu Ihrer beruflichen Aus- und Weiterbildung}
 
 \begin{tabularx}{\textwidth}{|c|c|X|c|c|}
     \hline
@@ -123,7 +125,7 @@ Schulentlassungsjahr \underline{\hspace{4cm}}
     & & & & \cb\ \cb\ \\ \hline
 \end{tabularx}
 
-\subsection*{Angaben zu Ihrem beruflichen Werdegang}
+\formsubsection{Angaben zu Ihrem beruflichen Werdegang}
 
 \begin{tabularx}{\textwidth}{|c|c|X|c|}
     \hline
@@ -141,7 +143,7 @@ Schulentlassungsjahr \underline{\hspace{4cm}}
     & & & \\ \hline
 \end{tabularx}
 
-\subsection*{Angaben zu Ihrer Mobilit\"at}
+\formsubsection{Angaben zu Ihrer Mobilit\"at}
 
 \begin{tabular}{|l|c|c|}
     \hline
@@ -155,7 +157,7 @@ Schulentlassungsjahr \underline{\hspace{4cm}}
 
 \formsection{Teil 3 - Vorbereitung Vermittlungsgespr\"ach}
 
-\subsection*{Angaben zu Ihren Sprachkenntnissen}
+\formsubsection{Angaben zu Ihren Sprachkenntnissen}
 
 \begin{tabularx}{\textwidth}{|X|c|c|}
     \hline
@@ -191,7 +193,7 @@ Ich habe mich bisher beworben
 
 Bitte legen Sie meine Bewerbung nicht vor bei (Firma): \underline{\hspace{8cm}}
 
-\subsection*{Famili\"ares Umfeld}
+\formsubsection{Famili\"ares Umfeld}
 In meinem famili\"aren Umfeld sind folgende Gegebenheiten zu ber\"ucksichtigen:
 
 \begin{itemize}[leftmargin=*]
@@ -204,7 +206,7 @@ In meinem famili\"aren Umfeld sind folgende Gegebenheiten zu ber\"ucksichtigen:
 
 \formsection{Teil 4 - Angaben zu Ihrem Migrationshintergrund}
 
-\begin{tabular}{|p{8cm}|c|c|c|}
+\begin{tabular}{|p{9.2cm}|c|c|c|}
     \hline
      & Ja & Nein & Keine Angabe \\ \hline
     1. Ich besitze die deutsche Staatsangeh\"origkeit. & \cbx & \cb & \cb \\ \hline
@@ -219,7 +221,7 @@ In meinem famili\"aren Umfeld sind folgende Gegebenheiten zu ber\"ucksichtigen:
 \vspace{1cm}
 \textbf{Zus\"atzliche Fragen f\"ur deutsche Staatsangeh\"orige, die nach 1949 zugewandert sind (Frage 1 ,,Ja`` und Frage 2b ,,Ja``):}
 
-\begin{tabular}{|p{8cm}|c|c|c|}
+\begin{tabular}{|p{9.2cm}|c|c|c|}
     \hline
      & Ja & Nein & Keine Angabe \\ \hline
     4 a) Ich habe die deutsche Staatsangeh\"origkeit als Aussiedler oder Sp\"ataussiedler erworben. & \cb & \cb & \cb \\ \hline
