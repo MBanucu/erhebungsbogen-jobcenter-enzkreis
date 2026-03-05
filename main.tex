@@ -13,6 +13,10 @@
 \usepackage[table]{xcolor}
 \usepackage{helvet}
 
+% The original scan has a white background; keep fills neutral.
+\definecolor{formgray}{rgb}{1,1,1}
+\setlength{\fboxsep}{4pt}
+
 \renewcommand{\familydefault}{\sfdefault}
 \setlength{\parindent}{0pt}
 \setlength{\parskip}{0pt}
@@ -21,7 +25,13 @@
 
 \newcommand{\cb}{\(\square\)}
 \newcommand{\cbx}{\(\boxtimes\)}
-\newcommand{\formsection}[1]{\section*{\normalsize\textbf{#1}}\vspace{-4pt}\rule{\textwidth}{0.4pt}\vspace{3pt}}
+\newcommand{\formsection}[1]{%
+    \par\vspace{4pt}%
+    \noindent\fcolorbox{black}{formgray}{%
+        \parbox{\dimexpr\textwidth-2\fboxsep-2\fboxrule\relax}{\textbf{#1}}%
+    }%
+    \par\vspace{4pt}%
+}
 \newcommand{\formsubsection}[1]{\par\vspace{2pt}\textbf{#1}\par\vspace{2pt}}
 
 \pagestyle{fancy}
@@ -61,22 +71,25 @@
 \formsubsection{Pers\"onliche Informationen}
 \begin{tabularx}{\textwidth}{|>{\raggedright\arraybackslash}p{4.5cm}|X|}
     \hline
-    \cellcolor{black}\textbf{\textcolor{white}{Vorname}} & \underline{\hspace{10cm}} \\ \hline
-    \cellcolor{black}\textbf{\textcolor{white}{Nachname}} & \underline{\hspace{10cm}} \\ \hline
-    \cellcolor{black}\textbf{\textcolor{white}{Geburtsdatum}} & \underline{\hspace{10cm}} \\ \hline
-    \cellcolor{black}\textbf{\textcolor{white}{Staatsangeh\"origkeit}} & \underline{\hspace{10cm}} \\ \hline
+    \cellcolor{formgray}\textbf{Vorname} & \underline{\hspace{10cm}} \\ \hline
+    \cellcolor{formgray}\textbf{Nachname} & \underline{\hspace{10cm}} \\ \hline
+    \cellcolor{formgray}\textbf{Geburtsdatum} & \underline{\hspace{10cm}} \\ \hline
+    \cellcolor{formgray}\textbf{Staatsangeh\"origkeit} & \underline{\hspace{10cm}} \\ \hline
 \end{tabularx}
 
 \formsubsection{Kontaktinformationen}
 \begin{tabularx}{\textwidth}{|>{\raggedright\arraybackslash}p{4.5cm}|X|}
     \hline
-    \cellcolor{black}\textbf{\textcolor{white}{Straße und Hausnummer:}} & \underline{\hspace{10cm}} \\ \hline
-    \cellcolor{black}\textbf{\textcolor{white}{Postleitzahl, Ort:}} & \underline{\hspace{10cm}} \\ \hline
-    \cellcolor{black}\textbf{\textcolor{white}{Telefon:}} & \underline{\hspace{6cm}} \quad Angaben freiwillig \\ \hline
-    \cellcolor{black}\textbf{\textcolor{white}{Fax:}} & \underline{\hspace{6cm}} \quad Angaben freiwillig \\ \hline
-    \cellcolor{black}\textbf{\textcolor{white}{E-Mail:}} & \underline{\hspace{10cm}} \quad Angaben freiwillig \\ \hline
-    \cellcolor{black}\textbf{\textcolor{white}{Handy:}} & \underline{\hspace{6cm}} \quad Angaben freiwillig \\ \hline
-    \cellcolor{black}\textbf{\textcolor{white}{Internetzugang:}} & \cb\ ja \quad \cb\ nein \\ \hline
+    \cellcolor{formgray}\textbf{Straße und Hausnummer:} & \underline{\hspace{10cm}} \\ \hline
+    \cellcolor{formgray}\textbf{Postleitzahl, Ort:} & \underline{\hspace{10cm}} \\ \hline
+\end{tabularx}
+
+\vspace{3pt}
+\begin{tabularx}{\textwidth}{|>{\raggedright\arraybackslash}p{3.2cm}|X|>{\raggedright\arraybackslash}p{3.2cm}|X|}
+    \hline
+    \cellcolor{formgray}\textbf{Telefon:} & \underline{\hspace{4.2cm}} \quad Angaben freiwillig & \cellcolor{formgray} & \\ \hline
+    \cellcolor{formgray}\textbf{Fax:} & \underline{\hspace{4.2cm}} \quad Angaben freiwillig & \cellcolor{formgray}\textbf{E-Mail:} & \underline{\hspace{4.2cm}} \quad Angaben freiwillig \\ \hline
+    \cellcolor{formgray}\textbf{Handy:} & \underline{\hspace{4.2cm}} \quad Angaben freiwillig & \cellcolor{formgray}\textbf{Internetzugang:} & \cb\ ja \quad \cb\ nein \\ \hline
 \end{tabularx}
 
 \formsubsection{Kundendaten}
@@ -118,7 +131,7 @@ Schulentlassungsjahr \underline{\hspace{4cm}}
 
 \begin{tabularx}{\textwidth}{|c|c|X|c|c|}
     \hline
-    \textbf{Zeitraum} &  & \textbf{Ausbildungsst\"atte} & \textbf{Ausbildung als} & \textbf{Abschluss} \\ \hline
+    \rowcolor{formgray}\textbf{Zeitraum} &  & \textbf{Ausbildungsst\"atte} & \textbf{Ausbildung als} & \textbf{Abschluss} \\ \hline
     \textbf{von} & \textbf{bis} & (Institution bzw. Unternehmen, Ort) & Bezeichnung & ja \quad nein \\ \hline
     Tag/Monat/Jahr & Tag/Monat/Jahr & & & \\ \hline
     & & & & \cb\ \cb\ \\ \hline
@@ -130,7 +143,7 @@ Schulentlassungsjahr \underline{\hspace{4cm}}
 
 \begin{tabularx}{\textwidth}{|c|c|X|c|}
     \hline
-    \textbf{Zeitraum} &  & \textbf{Besch\"aftigungsstelle} & \textbf{T\"atigkeit als} \\ \hline
+    \rowcolor{formgray}\textbf{Zeitraum} &  & \textbf{Besch\"aftigungsstelle} & \textbf{T\"atigkeit als} \\ \hline
     \textbf{von} & \textbf{bis} & (Name, Ort) & Bezeichnung \\ \hline
     Tag/Monat/Jahr & Tag/Monat/Jahr & & \\ \hline
     & & & \\ \hline
@@ -148,7 +161,7 @@ Schulentlassungsjahr \underline{\hspace{4cm}}
 
 \begin{tabular}{|l|c|c|}
     \hline
-    \textbf{F\"uhrerschein und Fahrzeug} & \textbf{F\"uhrerschein} & \textbf{Fahrzeug vorhanden} \\ \hline
+    \rowcolor{formgray}\textbf{F\"uhrerschein und Fahrzeug} & \textbf{F\"uhrerschein} & \textbf{Fahrzeug vorhanden} \\ \hline
     \textbf{Kraftrad} & \cb &  \\ \hline
     \textbf{PKW} & \cb & \cb \\ \hline
     \textbf{LKW} &  &  \\ \hline
@@ -162,7 +175,7 @@ Schulentlassungsjahr \underline{\hspace{4cm}}
 
 \begin{tabularx}{\textwidth}{|X|c|c|}
     \hline
-    \textbf{Muttersprache: \underline{\hspace{5cm}}} & \textbf{Grundkenntnisse} & \textbf{gut} \\ \hline
+    \rowcolor{formgray}\textbf{Muttersprache: \underline{\hspace{5cm}}} & \textbf{Grundkenntnisse} & \textbf{gut} \\ \hline
     Deutsch & \cb  & \cb  \\ \hline
     Englisch & \cb  & \cb  \\ \hline
 \end{tabularx}
@@ -173,7 +186,7 @@ Ich habe mich bisher beworben
 
 \begin{tabularx}{\textwidth}{|X|c|c|c|}
     \hline
-    \textbf{bei} & \textbf{als} & \textbf{Ergebnis} & \\ \hline
+    \rowcolor{formgray}\textbf{bei} & \textbf{als} & \textbf{Ergebnis} & \\ \hline
     (Firma) &  & offen / Absage & \\ \hline
     &  &  & \\ \hline
     &  &  & \\ \hline
@@ -196,7 +209,7 @@ In meinem famili\"aren Umfeld sind folgende Gegebenheiten zu ber\"ucksichtigen:
 
 \begin{tabular}{|p{9.2cm}|c|c|c|}
     \hline
-     & Ja & Nein & Keine Angabe \\ \hline
+    \rowcolor{formgray} & \textbf{Ja} & \textbf{Nein} & \textbf{Keine Angabe} \\ \hline
     1. Ich besitze die deutsche Staatsangeh\"origkeit. & \cb & \cb & \cb \\ \hline
     2 a) Ich bin in Deutschland geboren. & \cb & \cb & \cb \\ \hline
     \hspace{0.3cm}{\small (heutiges Gebiet der Bundesrepublik Deutschland)} & & & \\ \hline
@@ -211,7 +224,7 @@ In meinem famili\"aren Umfeld sind folgende Gegebenheiten zu ber\"ucksichtigen:
 
 \begin{tabular}{|p{9.2cm}|c|c|c|}
     \hline
-     & Ja & Nein & Keine Angabe \\ \hline
+    \rowcolor{formgray} & \textbf{Ja} & \textbf{Nein} & \textbf{Keine Angabe} \\ \hline
     4 a) Ich habe die deutsche Staatsangeh\"origkeit als Aussiedler oder Sp\"ataussiedler erworben. & \cb & \cb & \cb \\ \hline
     4 b) Ich habe die deutsche Staatsangeh\"origkeit als Ehegatte / Ehegattin eines (Sp\"at-)Aussiedlers erworben. & \cb & \cb & \cb \\ \hline
     4 c) Ich habe die deutsche Staatsangeh\"origkeit als Kind oder Enkelkind eines (Sp\"at-)Aussiedlers erworben. & \cb & \cb & \cb \\ \hline
