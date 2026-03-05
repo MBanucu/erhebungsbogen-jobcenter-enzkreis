@@ -6,6 +6,7 @@
 \usepackage{fancyhdr}
 \usepackage{lastpage}
 \usepackage{tabularx}
+\usepackage{tabularray}
 \usepackage{array}
 \usepackage{enumitem}
 \usepackage{graphicx}
@@ -110,41 +111,31 @@
   \end{tabularx}
 
   \vspace{15pt}
-  \begin{tabularx}{\linewidth}{@{}p{1.4cm}p{4.2cm}p{3.0cm}X@{}}
+  \begin{tblr}{
+    width = \linewidth,
+    colspec = { Q[l] X[c,1] Q[l] X[l,1.5] },
+    rowsep = 0pt,
+    row{odd}  = {b, belowsep = -15pt},   % ← applies to 1,3,5 automatically
+    row{even} = {t, abovesep = -15pt},   % ← applies to 2,4,6 automatically
+  }
     Telefon: &
-      \formline{4.0cm}\par
-      \begin{minipage}{4.0cm}
-        \centering
-        \scriptsize
-        \vbox{\vspace{-10pt}}
-        Angaben freiwillig
-      \end{minipage}\\[15pt]
+      \formlinefill & & \\
+    &
+      {\scriptsize Angaben freiwillig} & & \\[10pt]
     Fax: &
-      \formline{4.0cm}\par
-      \begin{minipage}{4.0cm}
-        \centering
-        \scriptsize
-        \vbox{\vspace{-10pt}}
-        Angaben freiwillig
-      \end{minipage}
+      \formlinefill
     & E-Mail: &
-      \formline{7cm}\par
-      \begin{minipage}{7cm}
-        \centering
-        \scriptsize
-        \vbox{\vspace{-10pt}}
-        Angaben freiwillig
-      \end{minipage}\\[15pt]
+      \formlinefill \\
+    &
+      {\scriptsize Angaben freiwillig}
+    & &
+      {\centering\scriptsize Angaben freiwillig} \\[10pt]
     Handy: &
-      \formline{4.0cm}\par
-      \begin{minipage}{4.0cm}
-        \centering
-        \scriptsize
-        \vbox{\vspace{-10pt}}
-        Angaben freiwillig
-      \end{minipage}
-    & Internetzugang: & \cb\ ja \quad \cb\ nein
-  \end{tabularx}
+      \formlinefill
+    & Internetzugang: & \cb\ ja \quad \cb\ nein \\
+    &
+      {\scriptsize Angaben freiwillig} & & \\
+  \end{tblr}
   \vspace{1pt}
 \end{minipage}%
 }
