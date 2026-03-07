@@ -306,39 +306,65 @@
 \formsection{Teil 3 \textendash{} Vorbereitung Vermittlungsgespräch}
 
 % === LARGE BORDERED BOX containing Bewerbung + Familiäres Umfeld ===
-\noindent\fbox{%
-\begin{minipage}[t]{\dimexpr\textwidth-2\fboxsep-2\fboxrule\relax}
-  \vspace{4pt}
-  \textbf{Ich suche eine Stelle als} \formlinefill\\[4pt]
-  \noindent\rule{\linewidth}{0.4pt}\\[4pt]
-  \textbf{Ich habe mich bisher beworben}\hfill \textbf{Ergebnis}\\[4pt]
-  \begin{tabularx}{\linewidth}{|X|p{3.5cm}|c|c|}
-    \hline
-    bei & als & offen & Absage \tabularnewline
-    \hline
-    \tablestrut & & \cb & \cb \tabularnewline \hline
-    \tablestrut & & \cb & \cb \tabularnewline \hline
-    \tablestrut & & \cb & \cb \tabularnewline \hline
-    \tablestrut & & \cb & \cb \tabularnewline \hline
-    \tablestrut & & \cb & \cb \tabularnewline \hline
-    \tablestrut & & \cb & \cb \tabularnewline \hline
-  \end{tabularx}
-  \vspace{6pt}\\
-  Bitte legen Sie meine Bewerbung nicht vor bei (Firma): \formlinefill\\[4pt]
-  \noindent\rule{\linewidth}{0.4pt}\\[4pt]
-  \textbf{Familiäres Umfeld}\\[4pt]
-  \noindent\rule{\linewidth}{0.4pt}\\[4pt]
-  In meinem familiären Umfeld sind folgende Gegebenheiten zu berücksichtigen:\\[8pt]
-  \hspace{6mm}\begin{tabularx}{\dimexpr\linewidth-6mm\relax}{@{}p{0.6cm}p{6.5cm}X@{}}
-    & & \hfill Betreuung sichergestellt \\[2pt]
-    \cb & Kinder unter 15 Jahren im Haushalt & \hfill \cb\ ja \hspace{1.5cm} \cb\ nein \\
-    & Anzahl \formline{3cm} & \\[6pt]
-    \cb & Pflege eines Angehörigen & \\[6pt]
-    \cb & Sonstige Verpflichtungen & \\[4pt]
-  \end{tabularx}
-  \vspace{2pt}
-\end{minipage}%
+\begin{tblr}{
+  width = \textwidth,
+  colspec = { |X| },
+  rowsep = 0pt,
+  colsep = 0pt,
 }
+  \hline
+  \begin{tblr}{
+    width = \linewidth,
+    colspec = { X },
+  }
+    \textbf{Ich suche eine Stelle als} \formlinefill \tablestrut
+  \end{tblr}
+  \\ \hline
+  \begin{tblr}{
+    width = \linewidth,
+    colspec = { X|X|l|l },
+    vline{3} = {1}{0pt},
+  }
+    \SetCell[c=2]{l} \textbf{Ich habe mich bisher beworben} \tablestrut & & \SetCell[c=2]{c} \textbf{Ergebnis} \\
+    bei & als & offen & Absage \\ \hline
+    \tablestrut & & \cb & \cb \\ \hline
+    \tablestrut & & \cb & \cb \\ \hline
+    \tablestrut & & \cb & \cb \\ \hline
+    \tablestrut & & \cb & \cb \\ \hline
+    \tablestrut & & \cb & \cb \\ \hline
+    \tablestrut & & \cb & \cb
+  \end{tblr}
+  \\ \hline
+  \begin{tblr}{
+    width = \linewidth,
+    colspec = { X },
+  }
+    Bitte legen Sie meine Bewerbung nicht vor bei (Firma): \formlinefill \tablestrut
+  \end{tblr}
+  \\ \hline
+  \begin{tblr}{
+    width = \linewidth,
+    colspec = { X },
+  }
+    \textbf{Familiäres Umfeld} \tablestrut
+  \end{tblr}
+  \\ \hline
+  \begin{tblr}{
+    width = \linewidth,
+    colspec = { lllX },
+  }
+    \SetCell[c=4]{l}
+      \textbf{In meinem familiären Umfeld sind folgende Gegebenheiten zu berücksichtigen:} \tablestrut
+      & & & &
+    \\
+    & & Betreuung sichergestellt & \\
+    \cb & Kinder unter 15 Jahren im Haushalt & \cb\ ja \hfill \cb\ nein \\
+    & Anzahl \formline{3cm} \\[6pt]
+    \cb & Pflege eines Angehörigen & & \\[6pt]
+    \cb & Sonstige Verpflichtungen & &
+  \end{tblr}
+  \\ \hline
+\end{tblr}
 
 \newpage
 
