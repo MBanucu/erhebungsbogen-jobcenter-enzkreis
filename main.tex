@@ -209,16 +209,22 @@
   Lebenslaufes brauchen Sie die Angaben zur beruflichen Aus- und Weiterbildung
   und zum beruflichen Werdegang nicht ausfüllen)}
 
-\begin{tabularx}{\linewidth}{|@{\hspace{2pt}}p{5.5cm}X@{}|}
+\begin{tblr}{
+  width = \textwidth,
+  colspec = { |l l X| },
+}
   \hline
-  \multicolumn{2}{|l|}{\textbf{Angaben zu Ihrem Schulabschluss}}\\
-  \cb\ kein Schulabschluss & \cb\ Fachhochschulreife \\[8pt]
-  \cb\ Abschluss Förderschule & \cb\ Fachabitur \\[8pt]
-  \cb\ Hauptschulabschluss & \cb\ Abitur \\[8pt]
-  \cb\ Mittlere Reife & \\[6pt]
-  \multicolumn{2}{|l|}{\textbf{Schulentlassungsjahr} \quad \formline{3cm}}\\
+  \SetCell[c=3]{l, font=\bfseries}
+    Angaben zu Ihrem Schulabschluss
+    & & \\[8pt]
+  \cb\ kein Schulabschluss & \cb\ Fachhochschulreife & \\[4pt]
+  \cb\ Abschluss Förderschule & \cb\ Fachabitur & \\[4pt]
+  \cb\ Hauptschulabschluss & \cb\ Abitur & \\[4pt]
+  \cb\ Mittlere Reife & & \\[8pt]
+  \SetCell[c=3]{l}
+    \textbf{Schulentlassungsjahr} \quad \formline{3cm} & & \\
   \hline
-\end{tabularx}
+\end{tblr}
 
 \vspace{8pt}
 
@@ -259,34 +265,40 @@
 \vspace{8pt}
 
 % === MOBILITäT (bordered box with heading inside) ===
-\begin{tabularx}{\linewidth}{|@{}lXX@{}|}
+\begin{tblr}{
+  width = \textwidth,
+  colspec = { |l c c X| },
+}
   \hline
-  \multicolumn{3}{|l|}{\textbf{Angaben zu Ihrer Mobilität}}\\
+  \SetCell[c=4]{l, font=\bfseries}
+    Angaben zu Ihrer Mobilität
+    & & & \\
   \hline
-  Führerschein und Fahrzeug & Führerschein & Fahrzeug vorhanden \tabularnewline
-  Kraftrad\tablestrut & \cb & \cb \tabularnewline
-  PKW\tablestrut & \cb & \cb \tabularnewline
-  LKW\tablestrut & \cb & \tabularnewline
+  Führerschein und Fahrzeug & Führerschein & Fahrzeug vorhanden \\
+  Kraftrad\tablestrut & \cb & \cb \\
+  PKW\tablestrut & \cb & \cb \\
+  LKW\tablestrut & \cb & \\
   \hline
-\end{tabularx}
+\end{tblr}
 
 \newpage
 
 % === SPRACHKENNTNISSEN (bordered box, at top of page 3) ===
-\noindent\fbox{%
-\begin{minipage}[t]{\dimexpr\textwidth-2\fboxsep-2\fboxrule\relax}
-  \vspace{3pt}
-  \textbf{Angaben zu Ihren Sprachkenntnissen}\\[2pt]
-  \rule{\linewidth}{0.4pt}\\[6pt]
-  \begin{tabularx}{\linewidth}{@{}p{3cm}Xp{3.2cm}p{1cm}@{}}
-    Muttersprache & \formline{8cm} & & \\[8pt]
-     & & Grundkenntnisse & gut \\[4pt]
-    Deutsch & & \hspace{1cm}\cb & \cb \\[6pt]
-    Englisch & & \hspace{1cm}\cb & \cb \\[4pt]
-  \end{tabularx}
-  \vspace{1pt}
-\end{minipage}%
+\begin{tblr}{
+  width = \textwidth,
+  colspec = { |l c c X| }
 }
+  \hline
+  \SetCell[c=4]{l, font=\bfseries}
+    Angaben zu Ihren Sprachkenntnissen
+    & & & \\
+  \hline
+  Muttersprache\tablestrut & \SetCell[c=3]{l} \formline{8cm} & & \\
+  & Grundkenntnisse & gut & \\
+  Deutsch & \cb & \cb & \\
+  Englisch & \cb & \cb & \\
+  \hline
+\end{tblr}
 
 \vspace{12pt}
 
