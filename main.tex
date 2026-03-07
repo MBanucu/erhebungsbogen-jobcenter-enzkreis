@@ -20,7 +20,7 @@
 \usepackage{amssymb}
 \usepackage[table]{xcolor}
 
-\setlength{\fboxsep}{4pt}
+% \setlength{\fboxsep}{4pt}
 \setlength{\parindent}{0pt}
 \setlength{\parskip}{0pt}
 \renewcommand{\arraystretch}{1.05}
@@ -209,50 +209,39 @@
   Lebenslaufes brauchen Sie die Angaben zur beruflichen Aus- und Weiterbildung
   und zum beruflichen Werdegang nicht ausfüllen)}
 
-\noindent\fbox{%
-\begin{minipage}[t]{\dimexpr\textwidth-2\fboxsep-2\fboxrule\relax}
-  \vspace{2pt}
-
-  \textbf{Angaben zu Ihrem Schulabschluss}\\[6pt]
-  \begin{tabularx}{\linewidth}{@{\hspace{2pt}}p{5.5cm}X@{}}
-    \cb\ kein Schulabschluss & \cb\ Fachhochschulreife \\[8pt]
-    \cb\ Abschluss Förderschule & \cb\ Fachabitur \\[8pt]
-    \cb\ Hauptschulabschluss & \cb\ Abitur \\[8pt]
-    \cb\ Mittlere Reife & \\[6pt]
-  \end{tabularx}
-  \textbf{Schulentlassungsjahr} \quad \formline{3cm}
-  \vspace{3pt}
-\end{minipage}%
-}
+\begin{tabularx}{\linewidth}{|@{\hspace{2pt}}p{5.5cm}X@{}|}
+  \hline
+  \multicolumn{2}{|l|}{\textbf{Angaben zu Ihrem Schulabschluss}}\\
+  \cb\ kein Schulabschluss & \cb\ Fachhochschulreife \\[8pt]
+  \cb\ Abschluss Förderschule & \cb\ Fachabitur \\[8pt]
+  \cb\ Hauptschulabschluss & \cb\ Abitur \\[8pt]
+  \cb\ Mittlere Reife & \\[6pt]
+  \multicolumn{2}{|l|}{\textbf{Schulentlassungsjahr} \quad \formline{3cm}}\\
+  \hline
+\end{tabularx}
 
 \vspace{8pt}
 
-% === BERUFLICHE AUS- UND WEITERBILDUNG (bold heading, no box) ===
-\textbf{Angaben zu Ihrer beruflichen Aus- und Weiterbildung}
-
-\vspace{2pt}
-
+% === BERUFLICHE AUS- UND WEITERBILDUNG (bold heading) ===
 \newcommand{\tablestrut}{\rule{0pt}{20pt}}
 \begin{tabularx}{\textwidth}{|p{2.2cm}|p{2.2cm}|X|p{2.8cm}|p{1.6cm}|}
-    \hline
-    \multicolumn{2}{|c|}{Zeitraum} & Ausbildungsstätte & Ausbildung als & Abschluss \\
-    \hline
-    \centering von\newline{\scriptsize Tag/Monat/Jahr} & \centering bis\newline{\scriptsize Tag/Monat/Jahr} & (Institution bzw. Unternehmen, Ort) & Bezeichnung & \hspace{2pt}ja \quad nein \tabularnewline
-    \hline
-    \tablestrut & & & & \hspace{2pt}\cb \quad \cb \tabularnewline \hline
-    \tablestrut & & & & \hspace{2pt}\cb \quad \cb \tabularnewline \hline
-    \tablestrut & & & & \hspace{2pt}\cb \quad \cb \tabularnewline \hline
+  \hline
+  \multicolumn{5}{|l|}{\textbf{Angaben zu Ihrer beruflichen Aus- und Weiterbildung}}\\
+  \multicolumn{2}{|c|}{Zeitraum} & Ausbildungsstätte & Ausbildung als & Abschluss \\
+  \hline
+  \centering von\newline{\scriptsize Tag/Monat/Jahr} & \centering bis\newline{\scriptsize Tag/Monat/Jahr} & (Institution bzw. Unternehmen, Ort) & Bezeichnung & \hspace{2pt}ja \quad nein \tabularnewline
+  \hline
+  \tablestrut & & & & \hspace{2pt}\cb \quad \cb \tabularnewline \hline
+  \tablestrut & & & & \hspace{2pt}\cb \quad \cb \tabularnewline \hline
+  \tablestrut & & & & \hspace{2pt}\cb \quad \cb \tabularnewline \hline
 \end{tabularx}
 
 \vspace{8pt}
 
 % === BERUFLICHER WERDEGANG (bold heading, no box) ===
-\textbf{Angaben zu Ihrem beruflichen Werdegang}
-
-\vspace{2pt}
-
 \begin{tabularx}{\textwidth}{|p{2.2cm}|p{2.2cm}|X|p{3cm}|}
     \hline
+    \multicolumn{4}{|l|}{\textbf{Angaben zu Ihrem beruflichen Werdegang}}\\
     \multicolumn{2}{|c|}{Zeitraum} & Beschäftigungsstelle & Tätigkeit als \\
     \hline
     \centering von\newline{\scriptsize Tag/Monat/Jahr} & \centering bis\newline{\scriptsize Tag/Monat/Jahr} & (Name, Ort) & Bezeichnung \tabularnewline
@@ -270,22 +259,16 @@
 \vspace{8pt}
 
 % === MOBILITäT (bordered box with heading inside) ===
-\noindent\fbox{%
-\begin{minipage}[t]{\dimexpr\textwidth-2\fboxsep-2\fboxrule\relax}
-  \vspace{3pt}
-  \textbf{Angaben zu Ihrer Mobilität}\\[4pt]
-  \begin{tabularx}{\linewidth}{@{}p{5cm}cX@{}}
-    Führerschein und Fahrzeug & Führerschein & Fahrzeug vorhanden \tabularnewline
-    \noalign{\vskip 2pt\hrule\vskip 2pt}
-    Kraftrad\tablestrut & \cb & \cb \tabularnewline
-    \noalign{\vskip 2pt\hrule\vskip 2pt}
-    PKW\tablestrut & \cb & \cb \tabularnewline
-    \noalign{\vskip 2pt\hrule\vskip 2pt}
-    LKW\tablestrut & \cb & \tabularnewline
-  \end{tabularx}
-  \vspace{2pt}
-\end{minipage}%
-}
+\begin{tabularx}{\linewidth}{|@{}lXX@{}|}
+  \hline
+  \multicolumn{3}{|l|}{\textbf{Angaben zu Ihrer Mobilität}}\\
+  \hline
+  Führerschein und Fahrzeug & Führerschein & Fahrzeug vorhanden \tabularnewline
+  Kraftrad\tablestrut & \cb & \cb \tabularnewline
+  PKW\tablestrut & \cb & \cb \tabularnewline
+  LKW\tablestrut & \cb & \tabularnewline
+  \hline
+\end{tabularx}
 
 \newpage
 
