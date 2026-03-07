@@ -107,10 +107,13 @@
 \begin{minipage}[t]{\dimexpr\textwidth-2\fboxsep-2\fboxrule\relax}
   \vspace{3pt}
   \textbf{Kontaktinformationen}\\[6pt]
-  \begin{tabularx}{\linewidth}{@{}p{4.2cm}X@{}}
+  \begin{tblr}{
+    width = \linewidth,
+    colspec = { Q[l] X[c]},
+  }
     Straße und Hausnummer: & \formlinefill \\[10pt]
     Postleitzahl, Ort: & \formlinefill
-  \end{tabularx}
+  \end{tblr}
 
   \vspace{15pt}
   \begin{tblr}{
