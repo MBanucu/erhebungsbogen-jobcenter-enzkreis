@@ -41,6 +41,13 @@ new_version="v${maj}.${min}.${pat}"
 echo ""
 echo "Current version: $current_tag"
 echo "New version:    $new_version"
+echo ""
+read -p "Proceed? (y/N): " confirm
+
+if [[ "$confirm" != "y" && "$confirm" != "Y" ]]; then
+  echo "Aborted."
+  exit 0
+fi
 
 if $dry_run; then
   echo ""
