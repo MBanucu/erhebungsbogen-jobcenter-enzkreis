@@ -2,6 +2,11 @@
 
 set -euo pipefail
 
+dry_run=false
+if [[ "${1:-}" == "--dry-run" ]]; then
+  dry_run=true
+fi
+
 if [[ ! -f build/main.pdf ]]; then
   echo "Error: build/main.pdf not found. Run build.sh first."
   exit 1
@@ -32,8 +37,22 @@ case $increment in
 esac
 
 new_version="v${maj}.${min}.${pat}"
+
+echo ""
 echo "Current version: $current_tag"
-echo "New version: $new_version"
+echo "New version:    $new_version"
+
+if $dry_run; then
+  echo ""
+  echo "[DRY RUN] Would execute:"
+  echo "  cp build/main.pdf docs/"
+  echo "  git add docs/main.pdf"
+  echo "  git commit -m 'docs: update PDF to $new_version'"
+  echo "  git tag $new_version"
+  echo ""
+  echo "Run without --dry-run to execute."
+  exit 0
+fi
 
 cp build/main.pdf docs/
 git add docs/main.pdf
