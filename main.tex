@@ -245,22 +245,34 @@
 \vspace{8pt}
 
 % === BERUFLICHER WERDEGANG (bold heading, no box) ===
-\begin{tabularx}{\textwidth}{|p{2.2cm}|p{2.2cm}|X|p{3cm}|}
-    \hline
-    \multicolumn{4}{|l|}{\textbf{Angaben zu Ihrem beruflichen Werdegang}}\\
-    \multicolumn{2}{|c|}{Zeitraum} & Beschäftigungsstelle & Tätigkeit als \\
-    \hline
-    \centering von\newline{\scriptsize Tag/Monat/Jahr} & \centering bis\newline{\scriptsize Tag/Monat/Jahr} & (Name, Ort) & Bezeichnung \tabularnewline
-    \hline
-    \tablestrut & & & \tabularnewline \hline
-    \tablestrut & & & \tabularnewline \hline
-    \tablestrut & & & \tabularnewline \hline
-    \tablestrut & & & \tabularnewline \hline
-    \tablestrut & & & \tabularnewline \hline
-    \tablestrut & & & \tabularnewline \hline
-    \tablestrut & & & \tabularnewline \hline
-    \tablestrut & & & \tabularnewline \hline
-\end{tabularx}
+\begin{tblr}{
+  width = \textwidth,
+  colspec = { ccQ[c, co=1]Q[c, co=1] },
+  vlines,
+  row{3} = {font=\scriptsize, valign=f},
+}
+  \hline
+  \SetCell[c=4]{l, font=\bfseries}
+    Angaben zu Ihrem beruflichen Werdegang
+  \\
+  \SetCell[c=2]{c} Zeitraum & & Beschäftigungsstelle & Tätigkeit als
+  \\ \hline
+  {
+    von\\Tag/Monat/Jahr
+  } &
+  {
+    bis\\Tag/Monat/Jahr
+  } &
+  (Name, Ort) &
+  Bezeichnung
+  \\ \hline
+  \tablestrut \\ \hline
+  \tablestrut \\ \hline
+  \tablestrut \\ \hline
+  \tablestrut \\ \hline
+  \tablestrut \\ \hline
+  \tablestrut \\ \hline
+\end{tblr}
 
 \vspace{8pt}
 
