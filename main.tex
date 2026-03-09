@@ -230,17 +230,35 @@
 
 % === BERUFLICHE AUS- UND WEITERBILDUNG (bold heading) ===
 \newcommand{\tablestrut}{\rule{0pt}{20pt}}
-\begin{tabularx}{\textwidth}{|p{2.2cm}|p{2.2cm}|X|p{2.8cm}|p{1.6cm}|}
+\begin{tblr}{
+  width = \textwidth,
+  colspec = { |c|c|X[c]|X[c]|Q[c, wd=2em]Q[c, wd=2em]| },
+  row{3} = {font=\scriptsize, valign=f},
+  row{4} = {rowsep = 10pt},
+  row{5} = {rowsep = 10pt},
+  row{6} = {rowsep = 10pt},
+}
   \hline
-  \multicolumn{5}{|l|}{\textbf{Angaben zu Ihrer beruflichen Aus- und Weiterbildung}}\\
-  \multicolumn{2}{|c|}{Zeitraum} & Ausbildungsstätte & Ausbildung als & Abschluss \\
+  \SetCell[c=6]{l, font=\bfseries}
+    Angaben zu Ihrer beruflichen Aus- und Weiterbildung
+  \\
+  \SetCell[c=2]{c} Zeitraum & & Ausbildungsstätte & Ausbildung als & \SetCell[c=2]{c} Abschluss\\
   \hline
-  \centering von\newline{\scriptsize Tag/Monat/Jahr} & \centering bis\newline{\scriptsize Tag/Monat/Jahr} & (Institution bzw. Unternehmen, Ort) & Bezeichnung & \hspace{2pt}ja \quad nein \tabularnewline
-  \hline
-  \tablestrut & & & & \hspace{2pt}\cb \quad \cb \tabularnewline \hline
-  \tablestrut & & & & \hspace{2pt}\cb \quad \cb \tabularnewline \hline
-  \tablestrut & & & & \hspace{2pt}\cb \quad \cb \tabularnewline \hline
-\end{tabularx}
+  {
+    von\\Tag/Monat/Jahr
+  } &
+  {
+    bis\\Tag/Monat/Jahr
+  } &
+  (Institution bzw. Unternehmen, Ort) &
+  Bezeichnung &
+  ja &
+  nein
+  \\ \hline
+  & & & & \cb & \cb \\ \hline
+  & & & & \cb & \cb \\ \hline
+  & & & & \cb & \cb \\ \hline
+\end{tblr}
 
 \vspace{8pt}
 
