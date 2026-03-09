@@ -578,30 +578,77 @@
     width = \linewidth,
     colspec = { lX },
   }
-    \tablestrut \textbf{Ich suche eine Stelle als}
+    \tablestrut \hspace{6pt}\textbf{Ich suche eine Stelle als}
     & \TextField[name=stelle, width=\linewidth, borderstyle=U]{}
   \end{tblr}
   \\ \hline
   \begin{tblr}{
     width = \linewidth,
-    colspec = { X|X|c|c },
+    colspec = {
+      X[colsep=0pt]|
+      X[colsep=0pt]|
+      c|
+      c
+    },
     vline{3} = {1}{0pt},
     rows = {valign = m},
-    row{3} = {rowsep = 10pt},
-    row{4} = {rowsep = 10pt},
-    row{5} = {rowsep = 10pt},
-    row{6} = {rowsep = 10pt},
-    row{7} = {rowsep = 10pt},
-    row{8} = {rowsep = 10pt},
+    row{3-8} = {rowsep = 0pt},
   }
     \SetCell[c=2]{l} \textbf{Ich habe mich bisher beworben} \tablestrut & & \SetCell[c=2]{c} \textbf{Ergebnis} \\
-    bei & als & offen & Absage \\ \hline
-    & & \ChoiceMenu[radio, name=bewerbungOffenOne]{}{{}=offen} & \ChoiceMenu[radio, name=bewerbungOffenOne]{}{{}=absage} \\ \hline
-    & & \ChoiceMenu[radio, name=bewerbungOffenTwo]{}{{}=offen} & \ChoiceMenu[radio, name=bewerbungOffenTwo]{}{{}=absage} \\ \hline
-    & & \ChoiceMenu[radio, name=bewerbungOffenThree]{}{{}=offen} & \ChoiceMenu[radio, name=bewerbungOffenThree]{}{{}=absage} \\ \hline
-    & & \ChoiceMenu[radio, name=bewerbungOffenFour]{}{{}=offen} & \ChoiceMenu[radio, name=bewerbungOffenFour]{}{{}=absage} \\ \hline
-    & & \ChoiceMenu[radio, name=bewerbungOffenFive]{}{{}=offen} & \ChoiceMenu[radio, name=bewerbungOffenFive]{}{{}=absage} \\ \hline
-    & & \ChoiceMenu[radio, name=bewerbungOffenSix]{}{{}=offen} & \ChoiceMenu[radio, name=bewerbungOffenSix]{}{{}=absage}
+    \hspace{6pt}bei & \hspace{6pt}als & offen & Absage \\ \hline
+    \begin{minipage}[c][\rowheight][c]{\linewidth}
+      \TextField[name=bewerbungOne, width=\linewidth, multiline=true, height=\rowheight, borderwidth=0]{}
+    \end{minipage}
+    & \begin{minipage}[c][\rowheight][c]{\linewidth}
+      \TextField[name=bewerbungOneTaetigkeit, width=\linewidth, multiline=true, height=\rowheight, borderwidth=0]{}
+    \end{minipage}
+    & \ChoiceMenu[radio, name=bewerbungOffenOne]{}{{}=offen}
+    & \ChoiceMenu[radio, name=bewerbungOffenOne]{}{{}=absage}
+    \\ \hline
+    \begin{minipage}[c][\rowheight][c]{\linewidth}
+      \TextField[name=bewerbungTwo, width=\linewidth, multiline=true, height=\rowheight, borderwidth=0]{}
+    \end{minipage}
+    & \begin{minipage}[c][\rowheight][c]{\linewidth}
+      \TextField[name=bewerbungTwoTaetigkeit, width=\linewidth, multiline=true, height=\rowheight, borderwidth=0]{}
+    \end{minipage}
+    & \ChoiceMenu[radio, name=bewerbungOffenTwo]{}{{}=offen}
+    & \ChoiceMenu[radio, name=bewerbungOffenTwo]{}{{}=absage}
+    \\ \hline
+    \begin{minipage}[c][\rowheight][c]{\linewidth}
+      \TextField[name=bewerbungThree, width=\linewidth, multiline=true, height=\rowheight, borderwidth=0]{}
+    \end{minipage}
+    & \begin{minipage}[c][\rowheight][c]{\linewidth}
+      \TextField[name=bewerbungThreeTaetigkeit, width=\linewidth, multiline=true, height=\rowheight, borderwidth=0]{}
+    \end{minipage}
+    & \ChoiceMenu[radio, name=bewerbungOffenThree]{}{{}=offen}
+    & \ChoiceMenu[radio, name=bewerbungOffenThree]{}{{}=absage}
+    \\ \hline
+    \begin{minipage}[c][\rowheight][c]{\linewidth}
+      \TextField[name=bewerbungFour, width=\linewidth, multiline=true, height=\rowheight, borderwidth=0]{}
+    \end{minipage}
+    & \begin{minipage}[c][\rowheight][c]{\linewidth}
+      \TextField[name=bewerbungFourTaetigkeit, width=\linewidth, multiline=true, height=\rowheight, borderwidth=0]{}
+    \end{minipage}
+    & \ChoiceMenu[radio, name=bewerbungOffenFour]{}{{}=offen}
+    & \ChoiceMenu[radio, name=bewerbungOffenFour]{}{{}=absage}
+    \\ \hline
+    \begin{minipage}[c][\rowheight][c]{\linewidth}
+      \TextField[name=bewerbungFive, width=\linewidth, multiline=true, height=\rowheight, borderwidth=0]{}
+    \end{minipage}
+    & \begin{minipage}[c][\rowheight][c]{\linewidth}
+      \TextField[name=bewerbungFiveTaetigkeit, width=\linewidth, multiline=true, height=\rowheight, borderwidth=0]{}
+    \end{minipage}
+    & \ChoiceMenu[radio, name=bewerbungOffenFive]{}{{}=offen}
+    & \ChoiceMenu[radio, name=bewerbungOffenFive]{}{{}=absage}
+    \\ \hline
+    \begin{minipage}[c][\rowheight][c]{\linewidth}
+      \TextField[name=bewerbungSix, width=\linewidth, multiline=true, height=\rowheight, borderwidth=0]{}
+    \end{minipage}
+    & \begin{minipage}[c][\rowheight][c]{\linewidth}
+      \TextField[name=bewerbungSixTaetigkeit, width=\linewidth, multiline=true, height=\rowheight, borderwidth=0]{}
+    \end{minipage}
+    & \ChoiceMenu[radio, name=bewerbungOffenSix]{}{{}=offen}
+    & \ChoiceMenu[radio, name=bewerbungOffenSix]{}{{}=absage}
   \end{tblr}
   \\ \hline
   \begin{tblr}{
