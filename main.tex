@@ -578,7 +578,7 @@
     width = \linewidth,
     colspec = { lX },
   }
-    \tablestrut \hspace{6pt}\textbf{Ich suche eine Stelle als}
+    \tablestrut \textbf{Ich suche eine Stelle als}
     & \TextField[name=stelle, width=\linewidth, borderstyle=U]{}
   \end{tblr}
   \\ \hline
@@ -594,7 +594,7 @@
     rows = {valign = m},
     row{3-8} = {rowsep = 0pt},
   }
-    \SetCell[c=2]{l} \textbf{Ich habe mich bisher beworben} \tablestrut & & \SetCell[c=2]{c} \textbf{Ergebnis} \\
+    \SetCell[c=2]{l} \hspace{6pt}\textbf{Ich habe mich bisher beworben} \tablestrut & & \SetCell[c=2]{c} \textbf{Ergebnis} \\
     \hspace{6pt}bei & \hspace{6pt}als & offen & Absage \\ \hline
     \begin{minipage}[c][\rowheight][c]{\linewidth}
       \TextField[name=bewerbungOne, width=\linewidth, multiline=true, height=\rowheight, borderwidth=0]{}
