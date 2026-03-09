@@ -39,10 +39,6 @@
             graphviz # falls du dot-Grafiken in LaTeX einbindest
             # pandoc             # für Markdown → LaTeX Konvertierungen
 
-            # convert pdf to jpg
-            imagemagick
-            ghostscript
-
             # file watcher
             entr
 
