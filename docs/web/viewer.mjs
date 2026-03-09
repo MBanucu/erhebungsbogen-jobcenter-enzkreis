@@ -18975,7 +18975,7 @@ const PDFViewerApplication = {
 initCom(PDFViewerApplication);
 PDFPrintServiceFactory.initGlobals(PDFViewerApplication);
 {
-  const HOSTED_VIEWER_ORIGINS = new Set(["null", "http://mozilla.github.io", "https://mozilla.github.io", "https://github.com", "https://githubusercontent.com"]);
+  const HOSTED_VIEWER_ORIGINS = new Set(["null", "http://localhost:8080", "http://localhost:8081", "http://localhost:8888", "http://localhost:9090", "http://localhost", "http://127.0.0.1", "http://mozilla.github.io", "https://mozilla.github.io", "https://github.com", "https://githubusercontent.com"]);
   var validateFileURL = function (file) {
     if (!file) {
       return;
