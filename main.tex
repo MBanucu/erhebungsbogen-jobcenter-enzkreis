@@ -105,103 +105,109 @@
 \vspace{4pt}
 
 % === KONTAKTINFORMATIONEN (bordered box) ===
-\noindent\fbox{%
-\begin{minipage}[t]{\dimexpr\textwidth-2\fboxsep-2\fboxrule\relax}
-  \vspace{3pt}
-  \textbf{Kontaktinformationen}\\[6pt]
-  \begin{tblr}{
-    width = \linewidth,
-    colspec = { Q[l] X[c]},
-  }
-    Straße und Hausnummer: & \formlinefill \\[10pt]
-    Postleitzahl, Ort: & \formlinefill
-  \end{tblr}
+\begin{Form}
+  \noindent\fbox{%
+  \begin{minipage}[t]{\dimexpr\textwidth-2\fboxsep-2\fboxrule\relax}
+    \vspace{3pt}
+    \textbf{Kontaktinformationen}\\[6pt]
+    \begin{tblr}{
+      width = \linewidth,
+      colspec = { Q[l] X[c]},
+    }
+      Straße und Hausnummer: & \formlinefill \\[10pt]
+      Postleitzahl, Ort: & \formlinefill
+    \end{tblr}
 
-  \vspace{15pt}
-  \begin{tblr}{
-    width = \linewidth,
-    colspec = { Q[l] X[c,1] Q[l] X[l,1.5] },
-    rowsep = 0pt,
-    row{odd}  = {b, belowsep = -15pt},   % ← applies to 1,3,5 automatically
-    row{even} = {t, abovesep = -15pt},   % ← applies to 2,4,6 automatically
+    \vspace{15pt}
+    \begin{tblr}{
+      width = \linewidth,
+      colspec = { Q[l] X[c,1] Q[l] X[l,1.5] },
+      rowsep = 0pt,
+      row{odd}  = {b, belowsep = -15pt},   % ← applies to 1,3,5 automatically
+      row{even} = {t, abovesep = -15pt},   % ← applies to 2,4,6 automatically
+    }
+      Telefon: &
+        \formlinefill & & \\
+      &
+        {\scriptsize Angaben freiwillig} & & \\[10pt]
+      Fax: &
+        \formlinefill
+      & E-Mail: &
+        \formlinefill \\
+      &
+        {\scriptsize Angaben freiwillig}
+      & &
+        {\centering\scriptsize Angaben freiwillig} \\[10pt]
+      Handy: &
+        \formlinefill
+      & Internetzugang: & \ChoiceMenu[radio, name=internetzugang]{}{{}=ja} ja \quad \ChoiceMenu[radio, name=internetzugang]{}{{}=nein} nein \\
+      &
+        {\scriptsize Angaben freiwillig} & & \\
+    \end{tblr}
+    \vspace{1pt}
+  \end{minipage}%
   }
-    Telefon: &
-      \formlinefill & & \\
-    &
-      {\scriptsize Angaben freiwillig} & & \\[10pt]
-    Fax: &
-      \formlinefill
-    & E-Mail: &
-      \formlinefill \\
-    &
-      {\scriptsize Angaben freiwillig}
-    & &
-      {\centering\scriptsize Angaben freiwillig} \\[10pt]
-    Handy: &
-      \formlinefill
-    & Internetzugang: & \cb\ ja \quad \cb\ nein \\
-    &
-      {\scriptsize Angaben freiwillig} & & \\
-  \end{tblr}
-  \vspace{1pt}
-\end{minipage}%
-}
+\end{Form}
 
 \vspace{4pt}
 
 % === KUNDENDATEN (bordered box) ===
-\noindent\fbox{%
-\begin{minipage}[t]{\dimexpr\textwidth-2\fboxsep-2\fboxrule\relax}
-  \vspace{3pt}
-  \textbf{Kundendaten}\\[4pt]
-  \begin{tabularx}{\linewidth}{@{}p{4.5cm}X@{}}
-    Ich bin/werde arbeitslos\newline seit/ab: &
-      \formline{6cm}\par
-      \begin{minipage}{6cm}
-        \centering
-        \scriptsize
-        \vbox{\vspace{-10pt}}
-        Monat/Jahr
-      \end{minipage}\\[30pt]
-    Letzte Tätigkeit/Ausbildung/\newline Sonstiges von: &
-      \formline{6cm}\par
-      \begin{minipage}{6cm}
-        \centering
-        \scriptsize
-        \vbox{\vspace{-10pt}}
-        Monat/Jahr
-      \end{minipage}\\[30pt]
-    als &
-      \formline{12cm}\par
-      \begin{minipage}{12cm}
-        \centering
-        \scriptsize
-        \vbox{\vspace{-8pt}}
-        Tätigkeit, Name und Ort des Arbeitgeber/Schule/etc.
-      \end{minipage}
-  \end{tabularx}
+\begin{Form}
+  \noindent\fbox{%
+  \begin{minipage}[t]{\dimexpr\textwidth-2\fboxsep-2\fboxrule\relax}
+    \vspace{3pt}
+    \textbf{Kundendaten}\\[4pt]
+    \begin{tabularx}{\linewidth}{@{}p{4.5cm}X@{}}
+      Ich bin/werde arbeitslos\newline seit/ab: &
+        \formline{6cm}\par
+        \begin{minipage}{6cm}
+          \centering
+          \scriptsize
+          \vbox{\vspace{-10pt}}
+          Monat/Jahr
+        \end{minipage}\\[30pt]
+      Letzte Tätigkeit/Ausbildung/\newline Sonstiges von: &
+        \formline{6cm}\par
+        \begin{minipage}{6cm}
+          \centering
+          \scriptsize
+          \vbox{\vspace{-10pt}}
+          Monat/Jahr
+        \end{minipage}\\[30pt]
+      als &
+        \formline{12cm}\par
+        \begin{minipage}{12cm}
+          \centering
+          \scriptsize
+          \vbox{\vspace{-8pt}}
+          Tätigkeit, Name und Ort des Arbeitgeber/Schule/etc.
+        \end{minipage}
+    \end{tabularx}
 
-  \vspace{20pt}
-  Beziehen Sie Arbeitslosengeld oder haben es beantragt? \quad \cb\ nein \quad \cb\ ja seit \formline{2.5cm}
-  \vspace{3pt}
-\end{minipage}%
-}
+    \vspace{20pt}
+    Beziehen Sie Arbeitslosengeld oder haben es beantragt? \quad \ChoiceMenu[radio, name=arbeitslosengeld]{}{{}=nein} nein \quad \ChoiceMenu[radio, name=arbeitslosengeld]{}{{}=ja} ja seit \formline{2.5cm}
+    \vspace{3pt}
+  \end{minipage}%
+  }
+\end{Form}
 
 \vspace{4pt}
 
 % === HEALTH / DISABILITY SECTION (bordered box) ===
-\noindent\fbox{%
-\begin{minipage}[t]{\dimexpr\textwidth-2\fboxsep-2\fboxrule\relax}
-  \vspace{4pt}
-  \begin{tabularx}{\linewidth}{@{}Xp{3.4cm}p{2.8cm}@{}}
-    Ich habe gesundheitliche Einschränkungen & \cb\ ja & \cb\ nein \\[8pt]
-    Grad der Behinderung & \cb\ schwerbehindert & \cb\ gleichgestellt \\[8pt]
-    Ich habe einen Antrag auf berufliche Rehabilitation gestellt. & \cb\ ja & \cb\ nein \\[8pt]
-    Liegt ein Bescheid vor? & \cb\ ja & \cb\ nein \\[3pt]
-  \end{tabularx}
-  \vspace{1pt}
-\end{minipage}%
-}
+\begin{Form}
+  \noindent\fbox{%
+  \begin{minipage}[t]{\dimexpr\textwidth-2\fboxsep-2\fboxrule\relax}
+    \vspace{4pt}
+    \begin{tabularx}{\linewidth}{@{}Xp{3.4cm}p{2.8cm}@{}}
+      Ich habe gesundheitliche Einschränkungen & \ChoiceMenu[radio, name=gesundheitlicheEinschraenkungen]{}{{}=ja} ja & \ChoiceMenu[radio, name=gesundheitlicheEinschraenkungen]{}{{}=nein} nein \\[8pt]
+      Grad der Behinderung & \ChoiceMenu[radio, name=gradDerBehinderung]{}{{}=schwerbehindert} schwerbehindert & \ChoiceMenu[radio, name=gradDerBehinderung]{}{{}=gleichgestellt} gleichgestellt \\[8pt]
+      Ich habe einen Antrag auf berufliche Rehabilitation gestellt. & \ChoiceMenu[radio, name=antragBeruflicheRehabilitation]{}{{}=ja} ja & \ChoiceMenu[radio, name=antragBeruflicheRehabilitation]{}{{}=nein} nein \\[8pt]
+      Liegt ein Bescheid vor? & \ChoiceMenu[radio, name=bescheidVorhanden]{}{{}=ja} ja & \ChoiceMenu[radio, name=bescheidVorhanden]{}{{}=nein} nein \\[3pt]
+    \end{tabularx}
+    \vspace{1pt}
+  \end{minipage}%
+  }
+\end{Form}
 
 \newpage
 
@@ -211,56 +217,60 @@
   Lebenslaufes brauchen Sie die Angaben zur beruflichen Aus- und Weiterbildung
   und zum beruflichen Werdegang nicht ausfüllen)}
 
-\begin{tblr}{
-  width = \textwidth,
-  colspec = { |l l X| },
-}
-  \hline
-  \SetCell[c=3]{l, font=\bfseries}
-    Angaben zu Ihrem Schulabschluss
-    & & \\[8pt]
-  \cb\ kein Schulabschluss & \cb\ Fachhochschulreife & \\[4pt]
-  \cb\ Abschluss Förderschule & \cb\ Fachabitur & \\[4pt]
-  \cb\ Hauptschulabschluss & \cb\ Abitur & \\[4pt]
-  \cb\ Mittlere Reife & & \\[8pt]
-  \SetCell[c=3]{l}
-    \textbf{Schulentlassungsjahr} \quad \formline{3cm} & & \\
-  \hline
-\end{tblr}
+\begin{Form}
+  \begin{tblr}{
+    width = \textwidth,
+    colspec = { |l l X| },
+  }
+    \hline
+    \SetCell[c=3]{l, font=\bfseries}
+      Angaben zu Ihrem Schulabschluss
+      & & \\[8pt]
+    \CheckBox[name=keinSchulabschluss]{}\ kein Schulabschluss & \CheckBox[name=fachhochschulreife]{}\ Fachhochschulreife & \\[4pt]
+    \CheckBox[name=abschlussFoerdershule]{}\ Abschluss Förderschule & \CheckBox[name=fachabitur]{}\ Fachabitur & \\[4pt]
+    \CheckBox[name=hauptschulabschluss]{}\ Hauptschulabschluss & \CheckBox[name=abitur]{}\ Abitur & \\[4pt]
+    \CheckBox[name=mittlereReife]{}\ Mittlere Reife & & \\[8pt]
+    \SetCell[c=3]{l}
+      \textbf{Schulentlassungsjahr} \quad \formline{3cm} & & \\
+    \hline
+  \end{tblr}
+\end{Form}
 
 \vspace{8pt}
 
 % === BERUFLICHE AUS- UND WEITERBILDUNG (bold heading) ===
 \newcommand{\tablestrut}{\rule{0pt}{20pt}}
-\begin{tblr}{
-  width = \textwidth,
-  colspec = { |c|c|X[c]|X[c]|Q[c, wd=2em]Q[c, wd=2em]| },
-  row{3} = {font=\scriptsize, valign=f},
-  row{4} = {rowsep = 10pt},
-  row{5} = {rowsep = 10pt},
-  row{6} = {rowsep = 10pt},
-}
-  \hline
-  \SetCell[c=6]{l, font=\bfseries}
-    Angaben zu Ihrer beruflichen Aus- und Weiterbildung
-  \\
-  \SetCell[c=2]{c} Zeitraum & & Ausbildungsstätte & Ausbildung als & \SetCell[c=2]{c} Abschluss\\
-  \hline
-  {
-    von\\Tag/Monat/Jahr
-  } &
-  {
-    bis\\Tag/Monat/Jahr
-  } &
-  (Institution bzw. Unternehmen, Ort) &
-  Bezeichnung &
-  ja &
-  nein
-  \\ \hline
-  & & & & \cb & \cb \\ \hline
-  & & & & \cb & \cb \\ \hline
-  & & & & \cb & \cb \\ \hline
-\end{tblr}
+\begin{Form}
+  \begin{tblr}{
+    width = \textwidth,
+    colspec = { |c|c|X[c]|X[c]|Q[c, wd=2em]Q[c, wd=2em]| },
+    row{3} = {font=\scriptsize, valign=f},
+    row{4} = {rowsep = 10pt},
+    row{5} = {rowsep = 10pt},
+    row{6} = {rowsep = 10pt},
+  }
+    \hline
+    \SetCell[c=6]{l, font=\bfseries}
+      Angaben zu Ihrer beruflichen Aus- und Weiterbildung
+    \\
+    \SetCell[c=2]{c} Zeitraum & & Ausbildungsstätte & Ausbildung als & \SetCell[c=2]{c} Abschluss\\
+    \hline
+    {
+      von\\Tag/Monat/Jahr
+    } &
+    {
+      bis\\Tag/Monat/Jahr
+    } &
+    (Institution bzw. Unternehmen, Ort) &
+    Bezeichnung &
+    ja &
+    nein
+    \\ \hline
+    & & & & \ChoiceMenu[radio, name=abschlussOne]{}{{}=ja} & \ChoiceMenu[radio, name=abschlussOne]{}{{}=nein} \\ \hline
+    & & & & \ChoiceMenu[radio, name=abschlussTwo]{}{{}=ja} & \ChoiceMenu[radio, name=abschlussTwo]{}{{}=nein} \\ \hline
+    & & & & \ChoiceMenu[radio, name=abschlussThree]{}{{}=ja} & \ChoiceMenu[radio, name=abschlussThree]{}{{}=nein} \\ \hline
+  \end{tblr}
+\end{Form}
 
 \vspace{8pt}
 
@@ -297,40 +307,44 @@
 \vspace{8pt}
 
 % === MOBILITäT (bordered box with heading inside) ===
-\begin{tblr}{
-  width = \textwidth,
-  colspec = { |l c c X| },
-}
-  \hline
-  \SetCell[c=4]{l, font=\bfseries}
-    Angaben zu Ihrer Mobilität
-    & & & \\
-  \hline
-  Führerschein und Fahrzeug & Führerschein & Fahrzeug vorhanden \\
-  Kraftrad\tablestrut & \cb & \cb \\
-  PKW\tablestrut & \cb & \cb \\
-  LKW\tablestrut & \cb & \\
-  \hline
-\end{tblr}
+\begin{Form}
+  \begin{tblr}{
+    width = \textwidth,
+    colspec = { |l c c X| },
+  }
+    \hline
+    \SetCell[c=4]{l, font=\bfseries}
+      Angaben zu Ihrer Mobilität
+      & & & \\
+    \hline
+    Führerschein und Fahrzeug & Führerschein & Fahrzeug vorhanden \\
+    Kraftrad\tablestrut & \CheckBox[name=kraftradFuehrerschein]{} & \CheckBox[name=kraftradFahrzeug]{} \\
+    PKW\tablestrut & \CheckBox[name=pkwFuehrerschein]{} & \CheckBox[name=pkwFahrzeug]{} \\
+    LKW\tablestrut & \CheckBox[name=lkwFuehrerschein]{} & \\
+    \hline
+  \end{tblr}
+\end{Form}
 
 \newpage
 
 % === SPRACHKENNTNISSEN (bordered box, at top of page 3) ===
-\begin{tblr}{
-  width = \textwidth,
-  colspec = { |l c c X| }
-}
-  \hline
-  \SetCell[c=4]{l, font=\bfseries}
-    Angaben zu Ihren Sprachkenntnissen
-    & & & \\
-  \hline
-  Muttersprache\tablestrut & \SetCell[c=3]{l} \formline{8cm} & & \\
-  & Grundkenntnisse & gut & \\
-  Deutsch & \cb & \cb & \\
-  Englisch & \cb & \cb & \\
-  \hline
-\end{tblr}
+\begin{Form}
+  \begin{tblr}{
+    width = \textwidth,
+    colspec = { |l c c X| }
+  }
+    \hline
+    \SetCell[c=4]{l, font=\bfseries}
+      Angaben zu Ihren Sprachkenntnissen
+      & & & \\
+    \hline
+    Muttersprache\tablestrut & \SetCell[c=3]{l} \formline{8cm} & & \\
+    & Grundkenntnisse & gut & \\
+    Deutsch & \ChoiceMenu[radio, name=deutsch]{}{{}=grundkenntnisse} & \ChoiceMenu[radio, name=deutsch]{}{{}=gut} & \\
+    Englisch & \ChoiceMenu[radio, name=englisch]{}{{}=grundkenntnisse} & \ChoiceMenu[radio, name=englisch]{}{{}=gut} & \\
+    \hline
+  \end{tblr}
+\end{Form}
 
 \vspace{12pt}
 
@@ -352,27 +366,29 @@
     \textbf{Ich suche eine Stelle als} \formlinefill \tablestrut
   \end{tblr}
   \\ \hline
-  \begin{tblr}{
-    width = \linewidth,
-    colspec = { X|X|c|c },
-    vline{3} = {1}{0pt},
-    rows = {valign = m},
-    row{3} = {rowsep = 10pt},
-    row{4} = {rowsep = 10pt},
-    row{5} = {rowsep = 10pt},
-    row{6} = {rowsep = 10pt},
-    row{7} = {rowsep = 10pt},
-    row{8} = {rowsep = 10pt},
-  }
-    \SetCell[c=2]{l} \textbf{Ich habe mich bisher beworben} \tablestrut & & \SetCell[c=2]{c} \textbf{Ergebnis} \\
-    bei & als & offen & Absage \\ \hline
-    & & \cb & \cb \\ \hline
-    & & \cb & \cb \\ \hline
-    & & \cb & \cb \\ \hline
-    & & \cb & \cb \\ \hline
-    & & \cb & \cb \\ \hline
-    & & \cb & \cb
-  \end{tblr}
+  \begin{Form}
+    \begin{tblr}{
+      width = \linewidth,
+      colspec = { X|X|c|c },
+      vline{3} = {1}{0pt},
+      rows = {valign = m},
+      row{3} = {rowsep = 10pt},
+      row{4} = {rowsep = 10pt},
+      row{5} = {rowsep = 10pt},
+      row{6} = {rowsep = 10pt},
+      row{7} = {rowsep = 10pt},
+      row{8} = {rowsep = 10pt},
+    }
+      \SetCell[c=2]{l} \textbf{Ich habe mich bisher beworben} \tablestrut & & \SetCell[c=2]{c} \textbf{Ergebnis} \\
+      bei & als & offen & Absage \\ \hline
+      & & \ChoiceMenu[radio, name=bewerbungOffenOne]{}{{}=offen} & \ChoiceMenu[radio, name=bewerbungOffenOne]{}{{}=absage} \\ \hline
+      & & \ChoiceMenu[radio, name=bewerbungOffenTwo]{}{{}=offen} & \ChoiceMenu[radio, name=bewerbungOffenTwo]{}{{}=absage} \\ \hline
+      & & \ChoiceMenu[radio, name=bewerbungOffenThree]{}{{}=offen} & \ChoiceMenu[radio, name=bewerbungOffenThree]{}{{}=absage} \\ \hline
+      & & \ChoiceMenu[radio, name=bewerbungOffenFour]{}{{}=offen} & \ChoiceMenu[radio, name=bewerbungOffenFour]{}{{}=absage} \\ \hline
+      & & \ChoiceMenu[radio, name=bewerbungOffenFive]{}{{}=offen} & \ChoiceMenu[radio, name=bewerbungOffenFive]{}{{}=absage} \\ \hline
+      & & \ChoiceMenu[radio, name=bewerbungOffenSix]{}{{}=offen} & \ChoiceMenu[radio, name=bewerbungOffenSix]{}{{}=absage}
+    \end{tblr}
+  \end{Form}
   \\ \hline
   \begin{tblr}{
     width = \linewidth,
@@ -388,20 +404,23 @@
     \textbf{Familiäres Umfeld} \tablestrut
   \end{tblr}
   \\ \hline
-  \begin{tblr}{
-    width = \linewidth,
-    colspec = { lllX },
-  }
-    \SetCell[c=4]{l}
-      \textbf{In meinem familiären Umfeld sind folgende Gegebenheiten zu berücksichtigen:} \tablestrut
-      & & & &
-    \\
-    & & Betreuung sichergestellt & \\
-    \cb & Kinder unter 15 Jahren im Haushalt & \cb\ ja \hfill \cb\ nein \\
-    & Anzahl \formline{3cm} \\[6pt]
-    \cb & Pflege eines Angehörigen & & \\[6pt]
-    \cb & Sonstige Verpflichtungen & &
-  \end{tblr}
+  \begin{Form}
+    \begin{tblr}{
+      width = \linewidth,
+      colspec = { lllX },
+    }
+      \SetCell[c=4]{l}
+        \textbf{In meinem familiären Umfeld sind folgende Gegebenheiten zu berücksichtigen:} \tablestrut
+        & & & &
+      \\
+      & & Betreuung sichergestellt & \\
+      \CheckBox[name=kinderUnter15Jahren]{} & Kinder unter 15 Jahren im Haushalt
+      & \ChoiceMenu[radio, name=betreuungSichergestellt]{}{{}=ja} ja \hfill \ChoiceMenu[radio, name=betreuungSichergestellt]{}{{}=nein} nein \\
+      & Anzahl \formline{3cm} \\[6pt]
+      \CheckBox[name=pflegeAngehoeriger]{} & Pflege eines Angehörigen & & \\[6pt]
+      \CheckBox[name=sonstigeVerpflichtungen]{} & Sonstige Verpflichtungen & &
+    \end{tblr}
+  \end{Form}
   \\ \hline
 \end{tblr}
 
@@ -418,25 +437,41 @@
     \hline
     & & & Ja & Nein & {Keine\\Angabe}
     \\ \hline
-    1 & \SetCell[c=2]{l} Ich besitze die deutsche Staatsangehörigkeit. & & \CheckBox[name=q1_ja]{} & \CheckBox[name=q1_nein]{} & \CheckBox[name=q1_keine]{}
+    1 & \SetCell[c=2]{l} Ich besitze die deutsche Staatsangehörigkeit. &
+    & \ChoiceMenu[radio, name=q1]{}{{}=ja}
+    & \ChoiceMenu[radio, name=q1]{}{{}=nein}
+    & \ChoiceMenu[radio, name=q1]{}{{}=keine}
     \\ \cline{2-6}
     \SetCell{valign = h}2 & \SetCell{valign = h}a) &
     {
       Ich bin in Deutschland geboren.\\
       (heutiges Gebiet der Bundesrepublik Deutschland)
     }
-    & \CheckBox[name=q2a_ja]{} & \CheckBox[name=q2a_nein]{} & \CheckBox[name=q2a_keine]{}
+    & \ChoiceMenu[radio, name=q2a]{}{{}=ja}
+    & \ChoiceMenu[radio, name=q2a]{}{{}=nein}
+    & \ChoiceMenu[radio, name=q2a]{}{{}=keine}
     \\
     & \SetCell{valign = h}b) &
     {
       Ich bin nach 1949 nach Deutschland zugewandert.\\
       (heutiges Gebiet der Bundesrepublik Deutschland)
     }
-    & \CheckBox[name=q2b_ja]{} & \CheckBox[name=q2b_nein]{} & \CheckBox[name=q2b_keine]{}
+    & \ChoiceMenu[radio, name=q2b]{}{{}=ja}
+    & \ChoiceMenu[radio, name=q2b]{}{{}=nein}
+    & \ChoiceMenu[radio, name=q2b]{}{{}=keine}
     \\ \cline{2-6}
-    \SetCell{valign = h}3 & \SetCell{valign = h}a) & Mein Vater ist außerhalb Deutschlands (heutiges Gebiet der Bundesrepublik Deutschland) geboren und nach 1949 zugewandert. & \CheckBox[name=q3a_ja]{} & \CheckBox[name=q3a_nein]{} & \CheckBox[name=q3a_keine]{}
+    \SetCell{valign = h}3
+    & \SetCell{valign = h}a)
+    & Mein Vater ist außerhalb Deutschlands (heutiges Gebiet der Bundesrepublik Deutschland) geboren und nach 1949 zugewandert.
+    & \ChoiceMenu[radio, name=q3a]{}{{}=ja}
+    & \ChoiceMenu[radio, name=q3a]{}{{}=nein}
+    & \ChoiceMenu[radio, name=q3a]{}{{}=keine}
     \\
-    & \SetCell{valign = h}b) & Meine Mutter ist außerhalb Deutschlands (heutiges Gebiet der Bundesrepublik Deutschland) geboren und nach 1949 zugewandert. & \CheckBox[name=q3b_ja]{} & \CheckBox[name=q3b_nein]{} & \CheckBox[name=q3b_keine]{}
+    & \SetCell{valign = h}b)
+    & Meine Mutter ist außerhalb Deutschlands (heutiges Gebiet der Bundesrepublik Deutschland) geboren und nach 1949 zugewandert.
+    & \ChoiceMenu[radio, name=q3b]{}{{}=ja}
+    & \ChoiceMenu[radio, name=q3b]{}{{}=nein}
+    & \ChoiceMenu[radio, name=q3b]{}{{}=keine}
     \\ \hline
   \end{tblr}
 \end{Form}
@@ -459,11 +494,23 @@
     \\ \hline
     & & & Ja & Nein & {Keine\\Angabe}
     \\ \hline
-    \SetCell{valign = h}4 & \SetCell{valign = h}a) & Ich habe die deutsche Staatsangehörigkeit als Aussiedler oder Spätaussiedler erworben. & \CheckBox[name=q4a_ja]{} & \CheckBox[name=q4a_nein]{} & \CheckBox[name=q4a_keine]{}
+      \SetCell{valign = h}4 & \SetCell{valign = h}a)
+      & Ich habe die deutsche Staatsangehörigkeit als Aussiedler oder Spätaussiedler erworben.
+      & \ChoiceMenu[radio, name=q4a]{}{{}=ja}
+      & \ChoiceMenu[radio, name=q4a]{}{{}=nein}
+      & \ChoiceMenu[radio, name=q4a]{}{{}=keine}
     \\
-    & \SetCell{valign = h}b) & Ich habe die deutsche Staatsangehörigkeit als Ehegatte / Ehegattin eines (Spät-)Aus\-sied\-lers erworben. & \CheckBox[name=q4b_ja]{} & \CheckBox[name=q4b_nein]{} & \CheckBox[name=q4b_keine]{}
+      & \SetCell{valign = h}b)
+      & Ich habe die deutsche Staatsangehörigkeit als Ehegatte / Ehegattin eines (Spät-)Aus\-sied\-lers erworben.
+      & \ChoiceMenu[radio, name=q4b]{}{{}=ja}
+      & \ChoiceMenu[radio, name=q4b]{}{{}=nein}
+      & \ChoiceMenu[radio, name=q4b]{}{{}=keine}
     \\
-    & \SetCell{valign = h}c) & Ich habe die deutsche Staatsangehörigkeit als Kind oder Enkelkind eines (Spät-)Aus\-sied\-lers erworben. & \CheckBox[name=q4c_ja]{} & \CheckBox[name=q4c_nein]{} & \CheckBox[name=q4c_keine]{}
+      & \SetCell{valign = h}c)
+      & Ich habe die deutsche Staatsangehörigkeit als Kind oder Enkelkind eines (Spät-)Aus\-sied\-lers erworben.
+      & \ChoiceMenu[radio, name=q4c]{}{{}=ja}
+      & \ChoiceMenu[radio, name=q4c]{}{{}=nein}
+      & \ChoiceMenu[radio, name=q4c]{}{{}=keine}
     \\ \hline
   \end{tblr}
 \end{Form}
