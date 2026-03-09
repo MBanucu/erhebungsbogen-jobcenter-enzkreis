@@ -370,50 +370,59 @@
 
 \formsection{Teil 4 \textendash{} Angaben zu Ihrem Migrationshintergrund}
 
-\vspace{4pt}
+\begin{tblr}{
+  width = \textwidth,
+  colspec = { |llXccc| },
+  rows = {rowsep = 10pt, valign = m},
+}
+  \hline
+  & & & Ja & Nein & {Keine\\Angabe}
+  \\ \hline
+  1 & \SetCell[c=2]{l} Ich besitze die deutsche Staatsangehörigkeit. & & \SetCell{valign = m}\cb & \SetCell{valign = m}\cb & \SetCell{valign = m}\cb
+  \\ \cline{2-6}
+  \SetCell{valign = h}2 & \SetCell{valign = h}a) &
+  {
+    Ich bin in Deutschland geboren.\\
+    (heutiges Gebiet der Bundesrepublik Deutschland)
+  }
+  & \SetCell{valign = m}\cb & \SetCell{valign = m}\cb & \SetCell{valign = m}\cb
+  \\
+  & \SetCell{valign = h}b) &
+  {
+    Ich bin nach 1949 nach Deutschland zugewandert.\\
+    (heutiges Gebiet der Bundesrepublik Deutschland)
+  }
+  & \SetCell{valign = m}\cb & \SetCell{valign = m}\cb & \SetCell{valign = m}\cb
+  \\ \cline{2-6}
+  \SetCell{valign = h}3 & \SetCell{valign = h}a) & Mein Vater ist außerhalb Deutschlands (heutiges Gebiet der Bundesrepublik Deutschland) geboren und nach 1949 zugewandert. & \SetCell{valign = m}\cb & \SetCell{valign = m}\cb & \SetCell{valign = m}\cb
+  \\
+  & \SetCell{valign = h}b) & Meine Mutter ist außerhalb Deutschlands (heutiges Gebiet der Bundesrepublik Deutschland) geboren und nach 1949 zugewandert. & \SetCell{valign = m}\cb & \SetCell{valign = m}\cb & \SetCell{valign = m}\cb
+  \\ \hline
+\end{tblr}
 
-\newcolumntype{C}[1]{>{\centering\arraybackslash}p{#1}}%
-\renewcommand{\arraystretch}{1.0}%
-\setlength{\tabcolsep}{3.5pt}%
-\noindent\begin{tabularx}{\textwidth}{|p{0.5cm}|p{0.5cm}|X|C{0.9cm}|C{0.9cm}|C{1.22cm}|}
-    \hline
-    & & & Ja & Nein & Keine\newline Angabe \tabularnewline
-    \hline
-    \rule{0pt}{16pt}1 & & Ich besitze die deutsche Staatsangehörigkeit. & \cb & \cb & \cb \tabularnewline[6pt]
-    \hline
-    \rule{0pt}{16pt}2 & a) & Ich bin in Deutschland geboren.\newline (heutiges Gebiet der Bundesrepublik Deutschland) & \cb & \cb & \cb \tabularnewline[6pt]
-    \hline
-    \rule{0pt}{16pt} & b) & Ich bin nach 1949 nach Deutschland zugewandert.\newline (heutiges Gebiet der Bundesrepublik Deutschland) & \cb & \cb & \cb \tabularnewline[6pt]
-    \hline
-    \rule{0pt}{16pt}3 & a) & Mein Vater ist außerhalb Deutschlands (heutiges Gebiet der Bundesrepublik Deutschland) geboren und nach 1949 zugewandert. & \cb & \cb & \cb \tabularnewline[6pt]
-    \hline
-    \rule{0pt}{16pt} & b) & Meine Mutter ist außerhalb Deutschlands (heutiges Gebiet der Bundesrepublik Deutschland) geboren und nach 1949 zugewandert. & \cb & \cb & \cb \tabularnewline[6pt]
-    \hline
-\end{tabularx}
+\vspace{40pt}
 
-\vspace{16pt}
-
-\noindent\begin{tabularx}{\textwidth}{|X|}
-    \hline
-    \rule{0pt}{14pt}Zusätzliche Fragen für deutsche Staatsangehörige, die nach 1949 zugewandert sind\newline
-    (Frage 1 = ,,Ja`` \textbf{\underline{und}} Frage 2b = ,,Ja``) \\[4pt]
-    \hline
-\end{tabularx}
-
-\vspace{-\arrayrulewidth}
-
-\noindent\begin{tabularx}{\textwidth}{|p{0.5cm}|p{0.5cm}|X|C{0.9cm}|C{0.9cm}|C{1.22cm}|}
-    \hline
-    & & & Ja & Nein & Keine\newline Angabe \tabularnewline
-    \hline
-    \rule{0pt}{16pt}4 & a) & Ich habe die deutsche Staatsangehörigkeit als Aussiedler oder Spätaussiedler erworben. & \cb & \cb & \cb \tabularnewline[6pt]
-    \hline
-    \rule{0pt}{16pt} & b) & Ich habe die deutsche Staatsangehörigkeit als Ehegatte / Ehegattin eines (Spät-)Aussiedlers erworben. & \cb & \cb & \cb \tabularnewline[6pt]
-    \hline
-    \rule{0pt}{16pt} & c) & Ich habe die deutsche Staatsangehörigkeit als Kind oder Enkelkind eines (Spät-)Aussiedlers erworben. & \cb & \cb & \cb \tabularnewline[6pt]
-    \hline
-\end{tabularx}
-\setlength{\tabcolsep}{6pt}%
-\renewcommand{\arraystretch}{1.05}%
+\begin{tblr}{
+  width = \textwidth,
+  colspec = { |llXccc| },
+  rows = {rowsep = 10pt, valign = m},
+}
+  \hline
+  \SetCell[c=6]{l}
+  {
+    Zusätzliche Fragen für deutsche Staatsangehörige, die nach 1949 zugewandert sind
+    \\
+    \textbf{(Frage 1 = \glqq Ja\grqq\ \underline{und} Frage 2b = \glqq Ja\grqq)}
+  }
+  \\ \hline
+  & & & Ja & Nein & {Keine\\Angabe}
+  \\ \hline
+  \SetCell{valign = h}4 & \SetCell{valign = h}a) & Ich habe die deutsche Staatsangehörigkeit als Aussiedler oder Spätaussiedler erworben. & \SetCell{valign = m}\cb & \SetCell{valign = m}\cb & \SetCell{valign = m}\cb
+  \\
+  & \SetCell{valign = h}b) & Ich habe die deutsche Staatsangehörigkeit als Ehegatte / Ehegattin eines (Spät-)Aussiedlers erworben. & \SetCell{valign = m}\cb & \SetCell{valign = m}\cb & \SetCell{valign = m}\cb
+  \\
+  & \SetCell{valign = h}c) & Ich habe die deutsche Staatsangehörigkeit als Kind oder Enkelkind eines (Spät-)Aussiedlers erworben. & \SetCell{valign = m}\cb & \SetCell{valign = m}\cb & \SetCell{valign = m}\cb
+  \\ \hline
+\end{tblr}
 
 \end{document}
