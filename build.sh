@@ -30,9 +30,10 @@ run_build() {
 }
 
 if [ "$WAIT" = true ]; then
-    # Run in foreground and stream log to file
-    run_build > "$build_dir/build.log" 2>&1
-    status=$?
+    # Run in foreground, stream log to file AND stdout
+    # Preserve the exit code of run_build when piping to tee
+    run_build 2>&1 | tee "$build_dir/build.log"
+    status=${PIPESTATUS[0]}
     echo "Build finished with exit code: $status"
     exit $status
 else
