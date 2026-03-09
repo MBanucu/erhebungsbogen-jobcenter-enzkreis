@@ -1,0 +1,9 @@
+\RequirePackage{pdfmanagement-testphase}
+\DocumentMetadata{testphase=phase-III} % Required for modern PDF management
+\documentclass{article}
+\usepackage{l3pdffield-testphase}
+\begin{document}
+\ExplSyntaxOn
+\pdffield_textfield:n { name=myField, width=4cm, MaxLen=10 }
+\ExplSyntaxOff
+\end{document}
