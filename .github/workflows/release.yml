@@ -22,6 +22,9 @@ jobs:
       - name: Run build
         run: bash build.sh
 
+      - name: Copy PDF to docs
+        run: cp build/main.pdf docs/
+
       - name: Upload PDF
         uses: softprops/action-gh-release@v2
         if: startsWith(github.ref, 'refs/tags/')
