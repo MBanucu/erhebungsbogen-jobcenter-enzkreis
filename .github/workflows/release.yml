@@ -20,7 +20,7 @@ jobs:
           github-token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Run build
-        run: bash build.sh
+        run: bash build.sh --wait
 
       - name: Copy PDF to docs
         run: cp build/main.pdf docs/
