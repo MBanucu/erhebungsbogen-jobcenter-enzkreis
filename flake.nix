@@ -43,6 +43,9 @@
             imagemagick
             ghostscript
 
+            # file watcher
+            entr
+
             bashInteractive
           ];
 
@@ -50,6 +53,8 @@
             echo "Tectonic-LaTeX-Umgebung geladen"
             echo "  → tectonic main.tex          (einmalig kompilieren + Abhängigkeiten holen)"
             echo "  → tectonic --watch main.tex   (live watch + rebuild)"
+            echo "  → ./build.sh                  (PDF + JPGs bauen)"
+            echo "  → echo main.tex | entr -s './build.sh'  (auto-rebuild bei Änderungen)"
             echo ""
             echo "Tipp für VSCode / Neovim:"
             echo "  Stelle latex-workshop oder texlab auf tectonic ein"
