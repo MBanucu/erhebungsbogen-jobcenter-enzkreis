@@ -14,6 +14,8 @@
 \usepackage{lastpage}
 \usepackage{tabularx}
 \usepackage{tabularray}
+\usepackage{microtype}
+\usepackage[hidelinks]{hyperref}
 \usepackage{array}
 \usepackage{enumitem}
 \usepackage{graphicx}
@@ -407,59 +409,63 @@
 
 \formsection{Teil 4 \textendash{} Angaben zu Ihrem Migrationshintergrund}
 
-\begin{tblr}{
-  width = \textwidth,
-  colspec = { |llXccc| },
-  rows = {rowsep = 10pt, valign = m},
-}
-  \hline
-  & & & Ja & Nein & {Keine\\Angabe}
-  \\ \hline
-  1 & \SetCell[c=2]{l} Ich besitze die deutsche Staatsangehörigkeit. & & \SetCell{valign = m}\cb & \SetCell{valign = m}\cb & \SetCell{valign = m}\cb
-  \\ \cline{2-6}
-  \SetCell{valign = h}2 & \SetCell{valign = h}a) &
-  {
-    Ich bin in Deutschland geboren.\\
-    (heutiges Gebiet der Bundesrepublik Deutschland)
+\begin{Form}
+  \begin{tblr}{
+    width = \textwidth,
+    colspec = { |llXccc| },
+    rows = {rowsep = 10pt, valign = m},
   }
-  & \SetCell{valign = m}\cb & \SetCell{valign = m}\cb & \SetCell{valign = m}\cb
-  \\
-  & \SetCell{valign = h}b) &
-  {
-    Ich bin nach 1949 nach Deutschland zugewandert.\\
-    (heutiges Gebiet der Bundesrepublik Deutschland)
-  }
-  & \SetCell{valign = m}\cb & \SetCell{valign = m}\cb & \SetCell{valign = m}\cb
-  \\ \cline{2-6}
-  \SetCell{valign = h}3 & \SetCell{valign = h}a) & Mein Vater ist außerhalb Deutschlands (heutiges Gebiet der Bundesrepublik Deutschland) geboren und nach 1949 zugewandert. & \SetCell{valign = m}\cb & \SetCell{valign = m}\cb & \SetCell{valign = m}\cb
-  \\
-  & \SetCell{valign = h}b) & Meine Mutter ist außerhalb Deutschlands (heutiges Gebiet der Bundesrepublik Deutschland) geboren und nach 1949 zugewandert. & \SetCell{valign = m}\cb & \SetCell{valign = m}\cb & \SetCell{valign = m}\cb
-  \\ \hline
-\end{tblr}
+    \hline
+    & & & Ja & Nein & {Keine\\Angabe}
+    \\ \hline
+    1 & \SetCell[c=2]{l} Ich besitze die deutsche Staatsangehörigkeit. & & \CheckBox[name=q1_ja]{} & \CheckBox[name=q1_nein]{} & \CheckBox[name=q1_keine]{}
+    \\ \cline{2-6}
+    \SetCell{valign = h}2 & \SetCell{valign = h}a) &
+    {
+      Ich bin in Deutschland geboren.\\
+      (heutiges Gebiet der Bundesrepublik Deutschland)
+    }
+    & \CheckBox[name=q2a_ja]{} & \CheckBox[name=q2a_nein]{} & \CheckBox[name=q2a_keine]{}
+    \\
+    & \SetCell{valign = h}b) &
+    {
+      Ich bin nach 1949 nach Deutschland zugewandert.\\
+      (heutiges Gebiet der Bundesrepublik Deutschland)
+    }
+    & \CheckBox[name=q2b_ja]{} & \CheckBox[name=q2b_nein]{} & \CheckBox[name=q2b_keine]{}
+    \\ \cline{2-6}
+    \SetCell{valign = h}3 & \SetCell{valign = h}a) & Mein Vater ist außerhalb Deutschlands (heutiges Gebiet der Bundesrepublik Deutschland) geboren und nach 1949 zugewandert. & \CheckBox[name=q3a_ja]{} & \CheckBox[name=q3a_nein]{} & \CheckBox[name=q3a_keine]{}
+    \\
+    & \SetCell{valign = h}b) & Meine Mutter ist außerhalb Deutschlands (heutiges Gebiet der Bundesrepublik Deutschland) geboren und nach 1949 zugewandert. & \CheckBox[name=q3b_ja]{} & \CheckBox[name=q3b_nein]{} & \CheckBox[name=q3b_keine]{}
+    \\ \hline
+  \end{tblr}
+\end{Form}
 
 \vspace{40pt}
 
-\begin{tblr}{
-  width = \textwidth,
-  colspec = { |llXccc| },
-  rows = {rowsep = 10pt, valign = m},
-}
-  \hline
-  \SetCell[c=6]{l}
-  {
-    Zusätzliche Fragen für deutsche Staatsangehörige, die nach 1949 zugewandert sind
-    \\
-    \textbf{(Frage 1 = \glqq Ja\grqq\ \underline{und} Frage 2b = \glqq Ja\grqq)}
+\begin{Form}
+  \begin{tblr}{
+    width = \textwidth,
+    colspec = { |llXccc| },
+    rows = {rowsep = 10pt, valign = m},
   }
-  \\ \hline
-  & & & Ja & Nein & {Keine\\Angabe}
-  \\ \hline
-  \SetCell{valign = h}4 & \SetCell{valign = h}a) & Ich habe die deutsche Staatsangehörigkeit als Aussiedler oder Spätaussiedler erworben. & \SetCell{valign = m}\cb & \SetCell{valign = m}\cb & \SetCell{valign = m}\cb
-  \\
-  & \SetCell{valign = h}b) & Ich habe die deutsche Staatsangehörigkeit als Ehegatte / Ehegattin eines (Spät-)Aus\-sied\-lers erworben. & \SetCell{valign = m}\cb & \SetCell{valign = m}\cb & \SetCell{valign = m}\cb
-  \\
-  & \SetCell{valign = h}c) & Ich habe die deutsche Staatsangehörigkeit als Kind oder Enkelkind eines (Spät-)Aus\-sied\-lers erworben. & \SetCell{valign = m}\cb & \SetCell{valign = m}\cb & \SetCell{valign = m}\cb
-  \\ \hline
-\end{tblr}
+    \hline
+    \SetCell[c=6]{l}
+    {
+      Zusätzliche Fragen für deutsche Staatsangehörige, die nach 1949 zugewandert sind
+      \\
+      \textbf{(Frage 1 = \glqq Ja\grqq\ \underline{und} Frage 2b = \glqq Ja\grqq)}
+    }
+    \\ \hline
+    & & & Ja & Nein & {Keine\\Angabe}
+    \\ \hline
+    \SetCell{valign = h}4 & \SetCell{valign = h}a) & Ich habe die deutsche Staatsangehörigkeit als Aussiedler oder Spätaussiedler erworben. & \CheckBox[name=q4a_ja]{} & \CheckBox[name=q4a_nein]{} & \CheckBox[name=q4a_keine]{}
+    \\
+    & \SetCell{valign = h}b) & Ich habe die deutsche Staatsangehörigkeit als Ehegatte / Ehegattin eines (Spät-)Aus\-sied\-lers erworben. & \CheckBox[name=q4b_ja]{} & \CheckBox[name=q4b_nein]{} & \CheckBox[name=q4b_keine]{}
+    \\
+    & \SetCell{valign = h}c) & Ich habe die deutsche Staatsangehörigkeit als Kind oder Enkelkind eines (Spät-)Aus\-sied\-lers erworben. & \CheckBox[name=q4c_ja]{} & \CheckBox[name=q4c_nein]{} & \CheckBox[name=q4c_keine]{}
+    \\ \hline
+  \end{tblr}
+\end{Form}
 
 \end{document}
